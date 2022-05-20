@@ -1,7 +1,7 @@
 # MinecraftEDUtutorials
 
 ```blocks
-player.sa(":)")
+player.say(":)")
 ```
 
 
