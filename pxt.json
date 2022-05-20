@@ -1,0 +1,19 @@
+{
+    "name": "MinecraftEDUtutorials",
+    "version": "0.0.1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "builder": "*"
+    },
+    "files": [
+        "README.md",
+    ],
+    "testFiles": [
+    ],
+    "public": true,
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "tsprj"
+}
