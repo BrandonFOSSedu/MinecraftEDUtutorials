@@ -2,25 +2,31 @@
 
 In order to program in Minecraft Education Edition we need to test for certain events in order to trigger our code.
 
-## Step 1: Player Event Driven Blocks
+## Step 1: Welcome to the Tutorial @showhint
+
+Here's an introduction screen.
+
+
+## Step 2: Player Event Driven Blocks
 
 Coders can use player events to execute a block of code.
+Some different stuff
+
+* [ ] Checkbox 1
+* [x] Checkbox 2
+
+* Bullet point
 
 ```typescript
 player.onChat("hello", function() {
 })
 ```
 
-Some different stuff
 
 ```template
 let x : number = 0
 ```
 
-* [ ] Checkbox 1
-* [x] Checkbox 2
-
-* Bullet point
 
 
 ### ~hint
