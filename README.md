@@ -4,7 +4,9 @@ In order to program in Minecraft Education Edition we need to test for certain e
 
 ## Step 1: Player Event Driven Blocks
 
-```blocks
+Coders can use player events to execute a block of code.
+
+```block
 player.onChat("run", function() {
 })
 ```
@@ -14,9 +16,6 @@ player.onChat("run", function() {
 
 * Bullet point
 
-```blocks
-
-```
 
 ### ~hint
 
