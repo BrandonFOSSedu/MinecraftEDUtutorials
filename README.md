@@ -7,7 +7,7 @@ In order to program in Minecraft Education Edition we need to test for certain e
 Coders can use player events to execute a block of code.
 
 ```typescript
-player.onChat("run", function() {
+player.onChat("hello", function() {
 })
 ```
 
