@@ -6,9 +6,15 @@ In order to program in Minecraft Education Edition we need to test for certain e
 
 Coders can use player events to execute a block of code.
 
-```block
+```typescript
 player.onChat("run", function() {
 })
+```
+
+Some different stuff
+
+```template
+let x : number = 0
 ```
 
 * [ ] Checkbox 1
