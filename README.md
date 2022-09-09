@@ -1,19 +1,22 @@
-# MinecraftEDUtutorials
+# Minecraft Education Edition Tutorials - Event Driven Commands
 
+In order to program in Minecraft Education Edition we need to test for certain events in order to trigger our code.
 
-
-
-Programming tutorials for use with Minecraft Education Edition using MakeCode
-
-## Step 1: Create a block
+## Step 1: Player Event Driven Blocks
 
 ```blocks
-player.say(":)")
+player.onChat("run", function() {
+})
+```
+
+```blocks
+
 ```
 
 Put some blocks onto the stage
 
 ## Somesort of hint @showhint
+Text hint
 
 ## Step 2: Run your code
 
