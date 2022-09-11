@@ -2,7 +2,7 @@
 
 In order to program in Minecraft Education Edition we need to test for certain events in order to trigger our code.
 
-## Step 1: Welcome to the Tutorial @showhint
+## Step 1: Welcome to the Tutorial @fullscreen
 
 Here's an introduction screen.
 
@@ -12,7 +12,8 @@ Here's an introduction screen.
 Coders can use player events to execute a block of code.
 Some different stuff
 
-``player.onChat("Hello world", function() {
+``typescript
+player.onChat("Hello world", function() {
 }``
 
 * Checkbox 1
