@@ -1,13 +1,15 @@
 # Minecraft Education Edition Tutorials - Event Driven Commands
 
-In order to program in Minecraft Education Edition we need to test for certain events in order to trigger our code.
+```template
+let x : number = 0
+```
 
 ## Step 1: Welcome to the Tutorial @showdialog
 
 Here's an introduction screen.
 
 
-## Step 2: Player Event Driven Blocks
+## Player Event Driven Blocks
 
 Coders can use player events to execute a block of code.
 Some different stuff
@@ -16,7 +18,7 @@ Some different stuff
 * Bullet point
 * Bullet point 2
 
-```blocks
+```typescript
 player.onChat("hello", function() {
 })
 player.onItemInteracted(IRON_SHOVEL, function() {
@@ -25,12 +27,6 @@ player.onItemInteracted(IRON_SHOVEL, function() {
 blocks.place(STONE, pos(0, 0, 0))
 ```
 
-
-Here's some hint stuff
-
-```template
-let x : number = 0
-```
 
 
 ## Step 3: Run your code
