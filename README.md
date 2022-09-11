@@ -16,10 +16,8 @@ Some different stuff
 player.onChat("Hello world", function() {
 }``
 
-* Checkbox 1
-* Checkbox 2
-
 * Bullet point
+* Bullet point 2
 
 ```blocks
 player.onChat("hello", function() {
