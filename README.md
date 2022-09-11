@@ -19,6 +19,15 @@ player.onChat("Hello world", function() {
 * Bullet point
 * Bullet point 2
 
+```blockconfig.local
+player.onChat("hello", function() {
+})
+player.onItemInteracted(IRON_SHOVEL, function() {
+    
+})
+blocks.place(STONE, pos(0, 0, 0))
+```
+
 ```blocks
 player.onChat("hello", function() {
 })
