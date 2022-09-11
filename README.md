@@ -12,21 +12,9 @@ Here's an introduction screen.
 Coders can use player events to execute a block of code.
 Some different stuff
 
-``typescript
-player.onChat("Hello world", function() {
-}``
 
 * Bullet point
 * Bullet point 2
-
-```blockconfig.local
-player.onChat("hello", function() {
-})
-player.onItemInteracted(IRON_SHOVEL, function() {
-    
-})
-blocks.place(STONE, pos(0, 0, 0))
-```
 
 ```blocks
 player.onChat("hello", function() {
@@ -38,9 +26,6 @@ blocks.place(STONE, pos(0, 0, 0))
 ```
 
 
-
-
-
 Here's some hint stuff
 
 ```template
@@ -48,7 +33,7 @@ let x : number = 0
 ```
 
 
-## Step 2: Run your code
+## Step 3: Run your code
 Put some blocks onto the stage
 
 
