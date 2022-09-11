@@ -2,7 +2,7 @@
 
 In order to program in Minecraft Education Edition we need to test for certain events in order to trigger our code.
 
-## Step 1: Welcome to the Tutorial @fullscreen
+## Step 1: Welcome to the Tutorial @showdialog
 
 Here's an introduction screen.
 
@@ -21,10 +21,15 @@ player.onChat("Hello world", function() {
 
 * Bullet point
 
-```typescript
+```blocks
 player.onChat("hello", function() {
 })
+player.onItemInteracted(IRON_SHOVEL, function() {
+    
+})
+blocks.place(STONE, pos(0, 0, 0))
 ```
+
 
 
 ```template
