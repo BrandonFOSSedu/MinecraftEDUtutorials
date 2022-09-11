@@ -15,9 +15,6 @@ Coders can use player events to execute a block of code.
 Some different stuff
 
 
-* Bullet point
-* Bullet point 2
-
 ```typescript
 player.onChat("hello", function() {
 })
@@ -32,5 +29,6 @@ blocks.place(STONE, pos(0, 0, 0))
 ## Step 3: Run your code
 Put some blocks onto the stage
 
+This is really hard
 
 Click the run button
