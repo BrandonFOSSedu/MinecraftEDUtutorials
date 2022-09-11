@@ -32,18 +32,14 @@ blocks.place(STONE, pos(0, 0, 0))
 
 
 
+
+
+Here's some hint stuff
+
 ```template
 let x : number = 0
 ```
 
-
-
-### ~hint
-
-#### Hint Title
-Here's some hint stuff
-
-###~
 
 ## Step 2: Run your code
 Put some blocks onto the stage
