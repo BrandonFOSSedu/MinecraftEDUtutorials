@@ -12,8 +12,11 @@ Here's an introduction screen.
 Coders can use player events to execute a block of code.
 Some different stuff
 
-* [ ] Checkbox 1
-* [x] Checkbox 2
+``player.onChat("Hello world", function() {
+}``
+
+* Checkbox 1
+* Checkbox 2
 
 * Bullet point
 
