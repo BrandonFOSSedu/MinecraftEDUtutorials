@@ -1,9 +1,9 @@
 # Minecraft Education Edition Tutorials - Event Driven Commands
 
 ```template
-let x : number = 0
-let s : string = "Hello world"
-
+let a : number = 10
+let s : string = "Hello World"
+let b : boolean = true
 ```
 
 ## Variables and Data @showdialog
@@ -19,12 +19,24 @@ Typescript lets users create variables using the ``let`` keyword, followed by a 
 An identifier is a *name* for a variable. Once given a value, variables can be used in other parts of the program where the name will be replaced by the current value of the variable.
 
 ```typescript
-let x : number = 0
+let x : number = 2
+let y : number = 3
 ```
 
-## Step 3: Run your code
-Put some blocks onto the stage
+## Print your variable
 
-This is really hard
+Once we have a variable with a value, we can use the ``player.say`` function to print out the value.
 
-Click the run button
+```typescript
+player.say(x);
+```
+
+## Something is wrong!
+
+Hover your cursor over the ``say`` method and note the *type* of the message. Typescript requires that any variables we use or give to functions must be the correct type. What type does ``x`` have?
+
+We need a way to *convert* the number into a *string* variable. Luckily, Typescript allows us to convert a number into a string with the ``.toString()`` method.
+
+```typescript
+player.say(x.toString())
+```
