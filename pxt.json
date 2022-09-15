@@ -9,10 +9,6 @@
     "files": [
         "README.md",
 	"main.ts",
-	"variables.md",
-	"functions.md",
-	"strings.md",
-	"usingfunctions.md",
 	"calculator.md"
     ],
     "testFiles": [
