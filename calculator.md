@@ -81,8 +81,19 @@ Example:
 ### Exercise: Create multiply and divide onChat commands. Use the examples above and fill in the missing code for both functions.
 
 ```typescript
-player.onChat("mula", function mulA(n : number) { a = a*n} )
-player.onChat("diva", function divA(n : number) { a = a/n } )
+player.onChat("mula", 
+              function mulA(n : number) 
+              { 
+                  a = a*n
+              } 
+)
+
+player.onChat("diva", 
+              function divA(n : number) 
+              { 
+                  a = a/n 
+              }
+)
 ```
 
 ## Adding some text output
@@ -105,19 +116,22 @@ Examples:
 ### Exercise: Copy the changes to the example functions, and add say commands to tell the user the result of the remaining functions
 
 ```typescript
-function resetA() {
-	a = 0;
-	player.say("The accumulator has been reset to 0");
+function resetA() 
+{
+    a = 0;
+    player.say("The accumulator has been reset to 0");
 }
 
-function mulA(n : number) {
-	a = a*n
-	player.say("The result is " + a);
+function mulA(n : number)
+{
+    a = a*n
+    player.say("The result is " + a);
 }
 
-function divA(n : number) {
-	a = a/n;
-	player.say("The result is " + a);
+function divA(n : number) 
+{
+    a = a/n;
+    player.say("The result is " + a);
 }
 ```
 
@@ -132,9 +146,10 @@ Add the following code to the end of the rest of the functions. Then test out al
 ``blocks.print(a.toString(), DIAMOND_BLOCK, pos(5, 0, 5), WEST)``
 
 ```typescript
-function mulA(n : number) {
-	a = a*n;
-	player.say("The result is " + a);
-	blocks.print(a.toString(), DIAMOND_BLOCK, pos(5, 0, 5), WEST); // Here!
+function mulA(n : number) 
+{
+    a = a*n;
+    player.say("The result is " + a);
+    blocks.print(a.toString(), DIAMOND_BLOCK, pos(5, 0, 5), WEST); // Here!
 }
 ```
