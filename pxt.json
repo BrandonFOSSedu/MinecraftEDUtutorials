@@ -1,6 +1,6 @@
 {
     "name": "MinecraftEDUtutorials",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -8,6 +8,7 @@
     },
     "files": [
         "README.md",
+	"main.ts",
 	"variables.md",
 	"functions.md",
 	"strings.md",
@@ -15,6 +16,7 @@
 	"calculator.md"
     ],
     "testFiles": [
+	"test.js" 
     ],
     "public": true,
     "supportedTargets": [
