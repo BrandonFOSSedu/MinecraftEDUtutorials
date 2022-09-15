@@ -92,6 +92,7 @@ Most of the calculator's functions are silent. It would be helpful to see the re
 By adding ``player.say()`` commands inside each function's code , we can write helpful messages back to the user. 
 
 Examples:
+
 - ``function setA(n : number) {``
 - ``    a = n;``
 - ``    player.say("Set the value of a to " + n); }``
