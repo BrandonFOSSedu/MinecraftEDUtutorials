@@ -1,1 +1,3 @@
-player.onChat("ugh", function() { player.say("Tough") } )
+player.onChat("run", function() {
+    player.say("hi");
+})

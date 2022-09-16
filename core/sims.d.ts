@@ -707,6 +707,7 @@ declare namespace gameplay {
     //% rule.defl=DAYLIGHT_CYCLE
     //% shim=gameplay::setGameRuleAsync promise
     function setGameRule(rule: GameRule, enabled: boolean): void;
+  - 
 
     /**
      * Change whether the world can be altered or not
@@ -729,6 +730,7 @@ declare namespace gameplay {
     //% blockId=setDifficulty block="set difficulty to %difficulty"
     //% shim=gameplay::setDifficultyAsync promise
     function setDifficulty(difficulty: GameDifficulty): void;
+   
 
     /**
      * Shows a title and subtitle to the selected targets

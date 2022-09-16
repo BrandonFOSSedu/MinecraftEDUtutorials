@@ -10,6 +10,7 @@
  * Minecraft block types: Grass, Stone, Air, etc...
  */
 //% emitAsConstant
+
 declare const enum Block {
     //% blockIdentity="blocks.block" enumval=2 block="Grass Block"
     //% jres alias=GRASS

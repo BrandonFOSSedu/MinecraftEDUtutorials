@@ -158,21 +158,20 @@ namespace player {
     //% mutatePrefix="with"
     //% deprecated=true
     export function onChatCommand(command: string, argTypes: ChatArgument[], 
-handler: (args: ChatCommandArguments) => void): void {
-    onChatCommandCore(command, () => 
-    {
-        const parsedArgs = parseCommandArgs(argTypes);
+        handler: (args: ChatCommandArguments) => void): void 
+        {
+            onChatCommandCore(command, () => 
+            {
+                const parsedArgs = parseCommandArgs(argTypes);
 
-        if (!parsedArgs) 
-        {
-            chatCommandSyntaxError(commandArgsHelp(command, argTypes));
-        } 
-        else 
-        {
-            handler(parsedArgs);
+                if (!parsedArgs) {
+                    chatCommandSyntaxError(commandArgsHelp(command, argTypes));
+                } 
+                else {
+                    handler(parsedArgs);
+                }
+            });
         }
-    });
-}
 
     /**
      * Runs code when you type a certain message in the game chat

@@ -8,6 +8,7 @@
 
 // Step 1: Calling Makecode Functions 
 player.teleport( pos(0, 0, 0))
+
 blocks.place( GRASS,
               pos(0, 0, 0))
 mobs.spawn( MUSHROOM_COW, 

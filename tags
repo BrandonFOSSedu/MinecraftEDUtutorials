@@ -1,0 +1,446 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+Action	core/pxt-helpers.ts	/^type Action = () => void;$/;"	t
+Array	core/pxt-core.d.ts	/^declare namespace Array {$/;"	c
+Array	core/pxt-core.d.ts	/^interface Array<T> {$/;"	i
+Buffer	core/buffer.ts	/^class Buffer {$/;"	c
+ChatCommandArguments	core/ns.ts	/^    export class ChatCommandArguments {$/;"	c
+Function	core/pxt-core.d.ts	/^interface Function {$/;"	i
+IArguments	core/pxt-core.d.ts	/^interface IArguments {$/;"	i
+Math	core/pxt-core.d.ts	/^declare namespace Math {$/;"	c
+Math	core/pxt-helpers.ts	/^namespace Math {$/;"	c
+Math	core/sims.d.ts	/^declare namespace Math {$/;"	c
+Number	core/pxt-helpers.ts	/^namespace Number {$/;"	c
+Object	core/pxt-core.d.ts	/^declare namespace Object {$/;"	c
+Object	core/pxt-core.d.ts	/^interface Object { }$/;"	i
+RegExp	core/pxt-core.d.ts	/^interface RegExp {$/;"	i
+String	core/pxt-core.d.ts	/^declare namespace String {$/;"	c
+StringMap	core/pxt-helpers.ts	/^interface StringMap {$/;"	i
+TemplateStringsArray	core/pxt-core.d.ts	/^type TemplateStringsArray = Array<string>;$/;"	t
+__assignableToFunction	core/pxt-core.d.ts	/^  __assignableToFunction: Function;$/;"	m
+__assignableToIArguments	core/pxt-core.d.ts	/^  __assignableToIArguments: IArguments;$/;"	m
+__assignableToRegExp	core/pxt-core.d.ts	/^  __assignableToRegExp: RegExp;$/;"	m
+__cameraPositionPicker	core/helpers.ts	/^function __cameraPositionPicker(pos: number): number {$/;"	f
+__colorNumberPicker	core/pxt-helpers.ts	/^    export function __colorNumberPicker(value: number) {$/;"	f
+__colorWheelHsvPicker	core/pxt-helpers.ts	/^    export function __colorWheelHsvPicker(value: number) {$/;"	f
+__colorWheelPicker	core/pxt-helpers.ts	/^    export function __colorWheelPicker(value: number) {$/;"	f
+__downUp	core/pxt-helpers.ts	/^    export function __downUp(down: boolean): boolean {$/;"	f
+__effect	core/fieldeditors.ts	/^    export function __effect(effect: Effect): number {$/;"	f
+__highLow	core/pxt-helpers.ts	/^    export function __highLow(high: boolean): boolean {$/;"	f
+__internal	core/pxt-helpers.ts	/^namespace __internal {$/;"	c
+__monster	core/fieldeditors.ts	/^    export function __monster(name: MonsterMob): number {$/;"	f
+__onOff	core/pxt-helpers.ts	/^    export function __onOff(on: boolean): boolean {$/;"	f
+__protractor	core/pxt-helpers.ts	/^    export function __protractor(angle: number) {$/;"	f
+__speedPicker	core/pxt-helpers.ts	/^    export function __speedPicker(speed: number): number {$/;"	f
+__timePicker	core/pxt-helpers.ts	/^    export function __timePicker(ms: number): number {$/;"	f
+__turnRatioPicker	core/pxt-helpers.ts	/^    export function __turnRatioPicker(turnratio: number): number {$/;"	f
+__upDown	core/pxt-helpers.ts	/^    export function __upDown(up: boolean): boolean {$/;"	f
+__winLose	core/pxt-helpers.ts	/^    export function __winLose(win: boolean): boolean {$/;"	f
+__yesNo	core/pxt-helpers.ts	/^    export function __yesNo(yes: boolean): boolean {$/;"	f
+_compassDirection	core/fieldeditors.ts	/^    export function _compassDirection(direction: CompassDirection): number {$/;"	f
+_control	core/sims.d.ts	/^declare namespace _control {$/;"	c
+_onCodeStart	core/pxt-core.d.ts	/^    export function _onCodeStart(arg: any): void;$/;"	f
+_onCodeStart	core/sims.d.ts	/^    function _onCodeStart(command: string): void;$/;"	f
+_onCodeStop	core/pxt-core.d.ts	/^    export function _onCodeStop(arg: any): void;$/;"	f
+_onCodeStop	core/sims.d.ts	/^    function _onCodeStop(command: string): void;$/;"	f
+_pickRandom	core/pxt-core.d.ts	/^    _pickRandom(): T;$/;"	m
+_popStatement	core/pxt-core.d.ts	/^    _popStatement(): void;$/;"	m
+_queryTargetCore	core/sims.d.ts	/^    function _queryTargetCore(target: TargetSelector): QueryTargetResult[];$/;"	f
+_removeAtStatement	core/pxt-core.d.ts	/^    _removeAtStatement(index: number): void;$/;"	m
+_shiftStatement	core/pxt-core.d.ts	/^    _shiftStatement(): void;$/;"	m
+_sixDirection	core/fieldeditors.ts	/^    export function _sixDirection(direction: SixDirection): number {$/;"	f
+_turnDirection	core/fieldeditors.ts	/^    export function _turnDirection(direction: TurnDirection): number {$/;"	f
+_unshiftStatement	core/pxt-core.d.ts	/^    _unshiftStatement(value: T): void;$/;"	m
+abs	core/pxt-helpers.ts	/^    export function abs(x: number): number {$/;"	f
+acos	core/pxt-core.d.ts	/^    function acos(x: number): number;$/;"	f
+add	core/sims.d.ts	/^        public add(offset: Position): Position;$/;"	m
+add	core/sims.d.ts	/^    function add(p1: Position, p2: Position): Position;$/;"	f
+addRule	core/sims.d.ts	/^        public addRule(rule: string, value: string): void;$/;"	m
+agent	core/agent.ts	/^namespace agent {$/;"	c
+agent	core/fieldeditors.ts	/^namespace agent {$/;"	c
+agent	core/ns.ts	/^namespace agent {$/;"	c
+agent	core/sims.d.ts	/^declare namespace agent {$/;"	c
+animal	core/fieldeditors.ts	/^    export function animal(name: AnimalMob): number {$/;"	f
+applyEffect	core/sims.d.ts	/^    function applyEffect(effect: number, target: TargetSelector, duration?: number, amplifier?: /;"	f
+applyReplace	core/pxt-helpers.ts	/^        function applyReplace(r: string, replacer: string | ((sub: string) => string)): string {$/;"	f
+arrayConcat	core/pxt-helpers.ts	/^    export function arrayConcat<T>(arr: T[], otherArr: T[]): T[] {$/;"	f
+arrayEvery	core/pxt-helpers.ts	/^    export function arrayEvery<T>(arr: T[], callbackfn: (value: T, index: number) => boolean): b/;"	f
+arrayFill	core/pxt-helpers.ts	/^    export function arrayFill<T>(O: T[], value: T, start?: number, end?: number) {$/;"	f
+arrayFilter	core/pxt-helpers.ts	/^    export function arrayFilter<T>(arr: T[], callbackfn: (value: T, index: number) => boolean): /;"	f
+arrayFind	core/pxt-helpers.ts	/^    export function arrayFind<T>(arr: T[], callbackfn: (value: T, index: number) => boolean): T /;"	f
+arrayForEach	core/pxt-helpers.ts	/^    export function arrayForEach<T>(arr: T[], callbackfn: (value: T, index: number) => void): vo/;"	f
+arrayJoin	core/pxt-helpers.ts	/^    export function arrayJoin<T>(arr: T[], sep?: string): string {$/;"	f
+arrayMap	core/pxt-helpers.ts	/^    export function arrayMap<T, U>(arr: T[], callbackfn: (value: T, index: number) => U): U[] {$/;"	f
+arrayPickRandom	core/pxt-helpers.ts	/^    export function arrayPickRandom<T>(arr: T[]): T {$/;"	f
+arrayReduce	core/pxt-helpers.ts	/^    export function arrayReduce<T, U>(arr: T[], callbackfn: (previousValue: U, currentValue: T, /;"	f
+arrayReverse	core/pxt-helpers.ts	/^    export function arrayReverse<T>(arr: T[]): void {$/;"	f
+arrayShift	core/pxt-helpers.ts	/^    export function arrayShift<T>(arr: T[]): T {$/;"	f
+arraySlice	core/pxt-helpers.ts	/^    export function arraySlice<T>(arr: T[], start?: number, end?: number): T[] {$/;"	f
+arraySome	core/pxt-helpers.ts	/^    export function arraySome<T>(arr: T[], callbackfn: (value: T, index: number) => boolean): bo/;"	f
+arraySort	core/pxt-helpers.ts	/^    export function arraySort<T>(arr: T[], callbackfn?: (value1: T, value2: T) => number): T[] {$/;"	f
+arraySplice	core/pxt-helpers.ts	/^    export function arraySplice<T>(arr: T[], start: number, len: number) {$/;"	f
+arrayUnshift	core/pxt-helpers.ts	/^        export function arrayUnshift<T>(arr: T[], ...values: T[]) : number {$/;"	f
+arrayUnshift	core/pxt-helpers.ts	/^    export function arrayUnshift<T>(arr: T[], value: T): number {$/;"	f
+asin	core/pxt-core.d.ts	/^    function asin(x: number): number;$/;"	f
+atCoordinate	core/sims.d.ts	/^        public atCoordinate(p: Position): void;$/;"	m
+atan	core/pxt-core.d.ts	/^    function atan(x: number): number;$/;"	f
+atan2	core/pxt-core.d.ts	/^    function atan2(y: number, x: number): number;$/;"	f
+attack	core/sims.d.ts	/^    function attack(direction: number): void;$/;"	f
+block	core/fieldeditors.ts	/^    export function block(block: Block): number {$/;"	f
+blockById	core/sims.d.ts	/^    function blockById(id: number): number;$/;"	f
+blockByName	core/sims.d.ts	/^    function blockByName(name: string): number;$/;"	f
+blockWithData	core/sims.d.ts	/^    function blockWithData(b: number, data: number): number;$/;"	f
+blocks	core/fieldeditors.ts	/^namespace blocks {$/;"	c
+blocks	core/ns.ts	/^namespace blocks {$/;"	c
+blocks	core/sims.d.ts	/^declare namespace blocks {$/;"	c
+callbackfn	core/pxt-helpers.ts	/^            callbackfn(arr[i], i);$/;"	m
+ceil	core/pxt-core.d.ts	/^    function ceil(x: number): number;$/;"	f
+charAt	core/pxt-core.d.ts	/^    charAt(index: number): string;$/;"	m
+charCodeAt	core/pxt-core.d.ts	/^    charCodeAt(index: number): number;$/;"	m
+chatCommandSyntaxError	core/ns.ts	/^            chatCommandSyntaxError(commandArgsHelp(command, argTypes));$/;"	m
+chatCommandSyntaxError	core/sims.d.ts	/^    function chatCommandSyntaxError(helpStr: string): void;$/;"	f
+clamp	core/pxt-helpers.ts	/^    export function clamp(min: number, max: number, value: number): number {$/;"	f
+clearEffect	core/sims.d.ts	/^    function clearEffect(target: TargetSelector): void;$/;"	f
+clone	core/sims.d.ts	/^    function clone(begin: Position, end: Position, destination: Position, mask: CloneMask, mode:/;"	f
+cloneFiltered	core/sims.d.ts	/^    function cloneFiltered(begin: Position, end: Position, destination: Position, block: number,/;"	f
+collect	core/sims.d.ts	/^    function collect(block: number): void;$/;"	f
+collectAll	core/sims.d.ts	/^    function collectAll(): void;$/;"	f
+color	core/sims.d.ts	/^    function color(color: BlockColor): number;$/;"	f
+colorToBlock	core/sims.d.ts	/^    function colorToBlock(type: ColoredBlock, color: number): number;$/;"	f
+commandArgsHelp	core/ns.ts	/^    function commandArgsHelp(commandName: string, argNames: ChatArgument[]): string {$/;"	f
+comparator	core/sims.d.ts	/^    function comparator(direction: CompassDirection, mode: ComparatorMode): number;$/;"	f
+compare	core/pxt-core.d.ts	/^    compare(that: string): number;$/;"	m
+concat	core/pxt-core.d.ts	/^    concat(arr: T[]): T[];$/;"	m
+concat	core/pxt-core.d.ts	/^    concat(other: string): string;$/;"	m
+console	core/helpers.ts	/^namespace console {$/;"	c
+constrain	core/sims.d.ts	/^    function constrain(value: number, low: number, high: number): number;$/;"	f
+control	core/pxt-core.d.ts	/^declare namespace control {$/;"	c
+cos	core/pxt-core.d.ts	/^    function cos(x: number): number;$/;"	f
+create	core/sims.d.ts	/^    function create(x: number, y: number, z: number): Position;$/;"	f
+createCamera	core/sims.d.ts	/^    function createCamera(x: number, y: number, z: number): Position;$/;"	f
+createHybrid	core/sims.d.ts	/^    function createHybrid(xRaw: string, yRaw: string, zRaw: string): Position;$/;"	f
+createLocal	core/sims.d.ts	/^    function createLocal(x: number, y: number, z: number): Position;$/;"	f
+createWorld	core/sims.d.ts	/^    function createWorld(x: number, y: number, z: number): Position;$/;"	f
+default	core/ns.ts	/^                default:$/;"	m
+default	core/pxt-helpers.ts	/^            default:$/;"	m
+destroy	core/sims.d.ts	/^    function destroy(direction: number): void;$/;"	f
+detect	core/sims.d.ts	/^    function detect(kind: AgentDetection, direction: number): boolean;$/;"	f
+dimension	core/sims.d.ts	/^        public dimension: number;$/;"	m
+dismissChat	core/sims.d.ts	/^    function dismissChat(): void;$/;"	f
+drop	core/sims.d.ts	/^    function drop(direction: number, slot: number, quantity: number): void;$/;"	f
+dropAll	core/sims.d.ts	/^    function dropAll(direction: number): void;$/;"	f
+effect	core/sims.d.ts	/^    function effect(effect: Effect, target: TargetSelector, duration?: number, amplifier?: numbe/;"	f
+enchant	core/sims.d.ts	/^    function enchant(target: TargetSelector, spell: string, level: number): void;$/;"	f
+entitiesByType	core/sims.d.ts	/^    function entitiesByType(type: number): TargetSelector;$/;"	f
+errorMessage	core/sims.d.ts	/^    function errorMessage(msg: string, multiline?: boolean): void;$/;"	f
+every	core/pxt-core.d.ts	/^    every(callbackfn: (value: T, index: number) => boolean): boolean;$/;"	m
+execute	core/sims.d.ts	/^    function execute(command: string): void;$/;"	f
+execute	core/sims.d.ts	/^    function execute(target: TargetSelector, position: Position, command: string): void;$/;"	f
+executeDetect	core/sims.d.ts	/^    function executeDetect(detectBlock: number, detectPosition: Position, command: string): void/;"	f
+exp	core/pxt-core.d.ts	/^    function exp(x: number): number;$/;"	f
+fill	core/pxt-core.d.ts	/^    fill(value: T, start?: number, end?: number): T[];$/;"	m
+fill	core/sims.d.ts	/^    function fill(block: number, from: Position, to: Position, operator?: FillOperation): void;$/;"	f
+filter	core/pxt-core.d.ts	/^    filter(callbackfn: (value: T, index: number) => boolean): T[];$/;"	m
+find	core/pxt-core.d.ts	/^    find(callbackfn: (value: T, index: number) => boolean): T;$/;"	m
+floor	core/pxt-core.d.ts	/^    function floor(x: number): number;$/;"	f
+for	core/ns.ts	/^            for (let arg of args) {$/;"	m
+for	core/ns.ts	/^        for (let i = 0; i < argNames.length; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^            for (let j = i + 1; j < len; ++j) {$/;"	m
+for	core/pxt-helpers.ts	/^            for(let i = values.length; i > 0; --i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < len - 1; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < len \/ 2; i++) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < len; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < len; ++i)$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < r; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 0; i < s.length; i++) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = 1; i < split.length; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let i = start; i < end; ++i) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let value of arr) {$/;"	m
+for	core/pxt-helpers.ts	/^        for (let value of otherArr) {$/;"	m
+for	core/pxt-helpers.ts	/^    for (let i = start; i < text.length; ++i) {$/;"	m
+forEach	core/pxt-core.d.ts	/^    forEach(callbackfn: (value: T, index: number) => void): void;$/;"	m
+forever	core/sims.d.ts	/^    function forever(body: () => void): void;$/;"	f
+fromCharCode	core/pxt-core.d.ts	/^    function fromCharCode(code: number): string;$/;"	f
+gameplay	core/ns.ts	/^namespace gameplay { }$/;"	c
+gameplay	core/sims.d.ts	/^declare namespace gameplay {$/;"	c
+get	core/pxt-core.d.ts	/^    get(index: number): T;$/;"	m
+getArgumentName	core/ns.ts	/^    function getArgumentName(argName: ChatArgument): string {$/;"	f
+getChatArg	core/sims.d.ts	/^    function getChatArg(index: number): string;$/;"	f
+getChatArgs	core/sims.d.ts	/^    function getChatArgs(command: string): string[];$/;"	f
+getItemCount	core/sims.d.ts	/^    function getItemCount(slot: number): number;$/;"	f
+getItemDetail	core/sims.d.ts	/^    function getItemDetail(slot: number): number;$/;"	f
+getItemSpace	core/sims.d.ts	/^    function getItemSpace(slot: number): number;$/;"	f
+getOrientation	core/sims.d.ts	/^    function getOrientation(): number;$/;"	f
+getPosition	core/sims.d.ts	/^    function getPosition(): Position;$/;"	f
+getValue	core/sims.d.ts	/^        public getValue(direction: Axis): number;$/;"	m
+give	core/sims.d.ts	/^    function give(target: TargetSelector, block: number, amount: number): void;$/;"	f
+groundPosition	core/sims.d.ts	/^    function groundPosition(pos: Position): Position;$/;"	f
+handler	core/ns.ts	/^            handler(parsedArgs);$/;"	m
+handler	core/ns.ts	/^            handler(parsedArgs[0], parsedArgs[1], parsedArgs[2]);$/;"	m
+handler	core/ns.ts	/^handler: (args: ChatCommandArguments) => void): void {$/;"	m
+helpers	core/pxt-helpers.ts	/^namespace helpers {$/;"	c
+idiv	core/pxt-core.d.ts	/^    function idiv(x: number, y: number): number;$/;"	f
+if	core/helpers.ts	/^            if (asArr.length <= maxElements) {$/;"	m
+if	core/helpers.ts	/^            if (asString != "[object Object]"$/;"	m
+if	core/helpers.ts	/^            if (snipped) {$/;"	m
+if	core/helpers.ts	/^        if (typeof obj == "string") {$/;"	m
+if	core/ns.ts	/^                    if (!pos) {$/;"	m
+if	core/ns.ts	/^                    if (!selectorArg) {$/;"	m
+if	core/ns.ts	/^                    if (Math.isNaN(numberArg)) {$/;"	m
+if	core/ns.ts	/^                    if (propertyNum === 1) {$/;"	m
+if	core/ns.ts	/^                    if (stringArg === undefined) {$/;"	m
+if	core/ns.ts	/^                if (!Math.isNaN(currentNumber)) {$/;"	m
+if	core/ns.ts	/^            if (!current) {$/;"	m
+if	core/ns.ts	/^            if (Math.isNaN(propertyNum)) {$/;"	m
+if	core/ns.ts	/^        if (!parsedArgs) $/;"	m
+if	core/pxt-helpers.ts	/^                    if (A.length == lim) return A;$/;"	m
+if	core/pxt-helpers.ts	/^                if (aIsNull && bIsNull) return 0;$/;"	m
+if	core/pxt-helpers.ts	/^                if (aIsUndef && bIsUndef) return 0;$/;"	m
+if	core/pxt-helpers.ts	/^                if (callbackfn(arr[i], arr[j]) > 0) {$/;"	m
+if	core/pxt-helpers.ts	/^                if (e == p) q++;$/;"	m
+if	core/pxt-helpers.ts	/^            if (!callbackfn(arr[i], i))$/;"	m
+if	core/pxt-helpers.ts	/^            if (!hasDigit) {$/;"	m
+if	core/pxt-helpers.ts	/^            if (65 <= c && c <= 90) {$/;"	m
+if	core/pxt-helpers.ts	/^            if (97 <= c && c <= 122) {$/;"	m
+if	core/pxt-helpers.ts	/^            if (S[q + i] != R[i])$/;"	m
+if	core/pxt-helpers.ts	/^            if (callbackfn(arr[i], i))$/;"	m
+if	core/pxt-helpers.ts	/^            if (callbackfn(v, i)) res.push(v)$/;"	m
+if	core/pxt-helpers.ts	/^            if (callbackfn(v, i)) return v;$/;"	m
+if	core/pxt-helpers.ts	/^            if (e < 0) q++;$/;"	m
+if	core/pxt-helpers.ts	/^            if (i > 0 && sep)$/;"	m
+if	core/pxt-helpers.ts	/^            if (typeof replacer == "string" || !replacer) {$/;"	m
+if	core/pxt-helpers.ts	/^            if (z > -1) return A;$/;"	m
+if	core/pxt-helpers.ts	/^        if (!callbackfn && arr.length > 1) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (!s.isEmpty() && empty) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (a <= b) return a;$/;"	m
+if	core/pxt-helpers.ts	/^        if (a >= b) return a;$/;"	m
+if	core/pxt-helpers.ts	/^        if (arr.length <= 0 || !callbackfn) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (code >= numberOffset && code < numberOffset + numCount)$/;"	m
+if	core/pxt-helpers.ts	/^        if (digits <= 0) return Math.round(x);$/;"	m
+if	core/pxt-helpers.ts	/^        if (end < 0) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (end === undefined) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (end === undefined)$/;"	m
+if	core/pxt-helpers.ts	/^        if (end > len)$/;"	m
+if	core/pxt-helpers.ts	/^        if (ind == -1)$/;"	m
+if	core/pxt-helpers.ts	/^        if (lim == 0)$/;"	m
+if	core/pxt-helpers.ts	/^        if (limit === undefined)$/;"	m
+if	core/pxt-helpers.ts	/^        if (q + r > s) return -1;$/;"	m
+if	core/pxt-helpers.ts	/^        if (s == 0) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (sep === undefined || sep === null) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (separator === undefined) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (split.length) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (start < 0) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (start === undefined)$/;"	m
+if	core/pxt-helpers.ts	/^        if (start > len)$/;"	m
+if	core/pxt-helpers.ts	/^        if (typeof replacer == "string" || !replacer) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (val == undefined || val >= radix) {$/;"	m
+if	core/pxt-helpers.ts	/^        if (x == 0) return 0;$/;"	m
+if	core/pxt-helpers.ts	/^        if (x > 0) return 1;$/;"	m
+if	core/pxt-helpers.ts	/^    if (!text || (radix != null && (radix < 2 || radix > 36)))$/;"	m
+if	core/pxt-helpers.ts	/^    if ((!radix || radix == 16)$/;"	m
+if	core/pxt-helpers.ts	/^    if (start === text.length)$/;"	m
+immutableWorld	core/sims.d.ts	/^    function immutableWorld(enabled: boolean): void;$/;"	f
+imul	core/pxt-core.d.ts	/^    function imul(x: number, y: number): number;$/;"	f
+includes	core/pxt-core.d.ts	/^    includes(searchValue: string, start?: number): boolean;$/;"	m
+indexOf	core/pxt-core.d.ts	/^    indexOf(item: T, fromIndex?: number): number;$/;"	m
+indexOf	core/pxt-core.d.ts	/^    indexOf(searchValue: string, start?: number): number;$/;"	m
+insertAt	core/pxt-core.d.ts	/^    insertAt(index: number, value: T): void;$/;"	m
+inspect	core/helpers.ts	/^    export function inspect(obj: any, maxElements = 20): string {$/;"	f
+inspect	core/sims.d.ts	/^    function inspect(kind: AgentInspection, direction: number): number;$/;"	f
+int16	core/pxt-core.d.ts	/^type int16 = number;$/;"	t
+int32	core/pxt-core.d.ts	/^type int32 = number;$/;"	t
+int8	core/pxt-core.d.ts	/^type int8 = number;$/;"	t
+interact	core/sims.d.ts	/^    function interact(direction: number): void;$/;"	f
+isArray	core/pxt-core.d.ts	/^    function isArray(obj: any): boolean;$/;"	f
+isDaylightTime	core/sims.d.ts	/^    function isDaylightTime(query: DayTime): boolean;$/;"	f
+isEmpty	core/pxt-core.d.ts	/^    isEmpty(): boolean;$/;"	m
+isNaN	core/pxt-helpers.ts	/^    export function isNaN(x: any): boolean {$/;"	f
+isNaN	core/pxt-helpers.ts	/^function isNaN(x: number) {$/;"	f
+isNaN	core/sims.d.ts	/^    function isNaN(n: number): boolean;$/;"	f
+isRelative	core/sims.d.ts	/^        public isRelative(direction: Axis): boolean;$/;"	m
+isWhitespace	core/pxt-helpers.ts	/^    export function isWhitespace(c: number): boolean {$/;"	f
+item	core/fieldeditors.ts	/^    export function item(item: Item): number {$/;"	f
+join	core/pxt-core.d.ts	/^    join(sep?: string): string;$/;"	m
+keys	core/pxt-core.d.ts	/^    function keys(obj: any): string[];$/;"	f
+kill	core/sims.d.ts	/^    function kill(target: TargetSelector): void;$/;"	f
+kindsOfBlocksInRange	core/sims.d.ts	/^    function kindsOfBlocksInRange(from: Position, to: Position): number[];$/;"	f
+length	core/pxt-core.d.ts	/^    length: number;$/;"	m
+lever	core/sims.d.ts	/^    function lever(position: LeverPosition): number;$/;"	f
+log	core/helpers.ts	/^    export function log(msg: any) {$/;"	f
+log	core/pxt-core.d.ts	/^    function log(x: number): number;$/;"	f
+loops	core/sims.d.ts	/^declare namespace loops {$/;"	c
+map	core/sims.d.ts	/^    function map(value: number, fromLow: number, fromHigh: number, toLow: number, toHigh: number/;"	f
+max	core/pxt-helpers.ts	/^    export function max(a: number, b: number): number {$/;"	f
+message	core/sims.d.ts	/^    function message(): string;$/;"	f
+min	core/pxt-helpers.ts	/^    export function min(a: number, b: number): number {$/;"	f
+mobs	core/fieldeditors.ts	/^namespace mobs {$/;"	c
+mobs	core/mobs.ts	/^namespace mobs {$/;"	c
+mobs	core/ns.ts	/^namespace mobs { }$/;"	c
+mobs	core/sims.d.ts	/^declare namespace mobs {$/;"	c
+monster	core/sims.d.ts	/^    function monster(name: MonsterMob): number;$/;"	f
+move	core/sims.d.ts	/^        public move(direction: CardinalDirection, blocks: number): Position;$/;"	m
+move	core/sims.d.ts	/^    function move(direction: number, blocks: number): void;$/;"	f
+name	core/sims.d.ts	/^    function name(): string;$/;"	f
+nameOfBlock	core/sims.d.ts	/^    function nameOfBlock(block: number): string;$/;"	f
+near	core/sims.d.ts	/^    function near(target: TargetSelector, pos: Position, radius: number): TargetSelector;$/;"	f
+number	core/ns.ts	/^        public number: number;$/;"	m
+number2	core/ns.ts	/^        public number2: number;$/;"	m
+onArrowShot	core/sims.d.ts	/^    function onArrowShot(handler: () => void): void;$/;"	f
+onBlockBroken	core/sims.d.ts	/^    function onBlockBroken(block: number, handler: () => void): void;$/;"	f
+onBlockPlaced	core/sims.d.ts	/^    function onBlockPlaced(block: number, handler: () => void): void;$/;"	f
+onBounced	core/sims.d.ts	/^    function onBounced(handler: () => void): void;$/;"	f
+onCameraUsed	core/sims.d.ts	/^    function onCameraUsed(handler: () => void): void;$/;"	f
+onChat	core/ns.ts	/^    export function onChat(command: string, handler: (num1: number, num2: number, num3: number) /;"	f
+onChatCommand	core/ns.ts	/^    export function onChatCommand(command: string, argTypes: ChatArgument[], $/;"	f
+onChatCommandCore	core/ns.ts	/^        onChatCommandCore(command, () => $/;"	m
+onChatCommandCore	core/ns.ts	/^    onChatCommandCore(command, () => $/;"	m
+onChatCommandCore	core/sims.d.ts	/^    function onChatCommandCore(command: string, handler: () => void): void;$/;"	f
+onDied	core/sims.d.ts	/^    function onDied(handler: () => void): void;$/;"	f
+onItemInteracted	core/sims.d.ts	/^    function onItemInteracted(item: number, handler: () => void): void;$/;"	f
+onMobKilled	core/sims.d.ts	/^    function onMobKilled(mob: number, handler: () => void): void;$/;"	f
+onTeleported	core/sims.d.ts	/^    function onTeleported(handler: () => void): void;$/;"	f
+onTellCommand	core/sims.d.ts	/^    function onTellCommand(command: string, handler: () => void): void;$/;"	f
+onTravelled	core/sims.d.ts	/^    function onTravelled(method: TravelMethod, handler: () => void): void;$/;"	f
+outsideRadius	core/sims.d.ts	/^        public outsideRadius(radius: number): void;$/;"	m
+parseCommandArgs	core/ns.ts	/^    function parseCommandArgs(argNames: ChatArgument[]): ChatCommandArguments {$/;"	f
+parseInt	core/pxt-helpers.ts	/^function parseInt(text: string, radix?: number): number {$/;"	f
+parseSelector	core/sims.d.ts	/^    function parseSelector(str: string): TargetSelector;$/;"	f
+pause	core/sims.d.ts	/^    function pause(ms: number): void;$/;"	f
+place	core/sims.d.ts	/^    function place(block: number, pos: Position): void;$/;"	f
+place	core/sims.d.ts	/^    function place(direction: number): void;$/;"	f
+player	core/ns.ts	/^namespace player {$/;"	c
+player	core/player.ts	/^namespace player {$/;"	c
+player	core/sims.d.ts	/^declare namespace player {$/;"	c
+playerByName	core/sims.d.ts	/^    function playerByName(name: string): TargetSelector;$/;"	f
+playersInGameMode	core/sims.d.ts	/^    function playersInGameMode(mode: GameMode): TargetSelector;$/;"	f
+pop	core/pxt-core.d.ts	/^    pop(): T;$/;"	m
+pos	core/helpers.ts	/^function pos(x: number, y: number, z: number): Position {$/;"	f
+posCamera	core/helpers.ts	/^function posCamera(x: number, y: number, z: number): Position {$/;"	f
+posLocal	core/helpers.ts	/^function posLocal(x: number, y: number, z: number): Position {$/;"	f
+position	core/ns.ts	/^        public position: Position;$/;"	m
+position	core/sims.d.ts	/^    function position(): Position;$/;"	f
+position2	core/ns.ts	/^        public position2: Position;$/;"	m
+positions	core/ns.ts	/^namespace positions { }$/;"	c
+positions	core/sims.d.ts	/^declare namespace positions {$/;"	c
+positionsOfBlocksInRange	core/sims.d.ts	/^    function positionsOfBlocksInRange(block: number, from: Position, to: Position): Position[];$/;"	f
+pow	core/pxt-core.d.ts	/^    function pow(x: number, y: number): number;$/;"	f
+print	core/sims.d.ts	/^    function print(text: string, block: number, position: Position, direction: CompassDirection)/;"	f
+projectile	core/fieldeditors.ts	/^    export function projectile(name: ProjectileMob): number {$/;"	f
+push	core/pxt-core.d.ts	/^    push(item: T): void;$/;"	m
+queryTarget	core/mobs.ts	/^    export function queryTarget(target: TargetSelector): QueryTargetResult[] {$/;"	f
+random	core/pxt-core.d.ts	/^    function random(): number;$/;"	f
+random	core/sims.d.ts	/^    function random(p1: Position, p2: Position): Position;$/;"	f
+randomRange	core/pxt-core.d.ts	/^    function randomRange(min: number, max: number): number;$/;"	f
+randpos	core/helpers.ts	/^function randpos(p1: Position, p2: Position): Position {$/;"	f
+removeAt	core/pxt-core.d.ts	/^    removeAt(index: number): T;$/;"	m
+removeElement	core/pxt-core.d.ts	/^    removeElement(element: T): boolean;$/;"	m
+repeater	core/sims.d.ts	/^    function repeater(direction: CompassDirection, delay: number): number;$/;"	f
+replace	core/pxt-core.d.ts	/^    replace(toReplace: string, replacer: string | ((sub: string) => string)): string;$/;"	m
+replace	core/sims.d.ts	/^    function replace(newblock: number, oldblock: number, from: Position, to: Position): void;$/;"	f
+replaceAll	core/pxt-core.d.ts	/^    replaceAll(toReplace: string, replacer: string | ((sub: string) => string)): string;$/;"	m
+return	core/pxt-helpers.ts	/^                return (a + "").compare(b + "");$/;"	m
+reverse	core/pxt-core.d.ts	/^    reverse(): void;$/;"	m
+round	core/pxt-core.d.ts	/^    function round(x: number): number;$/;"	f
+roundWithPrecision	core/pxt-helpers.ts	/^    export function roundWithPrecision(x: number, digits: number): number {$/;"	f
+runChatCommand	core/sims.d.ts	/^    function runChatCommand(command: string): void;$/;"	f
+runChatCommandWithArguments	core/sims.d.ts	/^    function runChatCommandWithArguments(command: string, arg: string): void;$/;"	f
+runInBackground	core/sims.d.ts	/^    function runInBackground(handler: () => void): void;$/;"	f
+say	core/player.ts	/^    export function say(message: any) {$/;"	f
+selector	core/ns.ts	/^        public selector: TargetSelector;$/;"	m
+selector2	core/ns.ts	/^        public selector2: TargetSelector;$/;"	m
+set	core/pxt-core.d.ts	/^    set(index: number, value: T): void;$/;"	m
+setAssist	core/sims.d.ts	/^    function setAssist(assist: AgentAssist, on: boolean): void;$/;"	f
+setDifficulty	core/sims.d.ts	/^    function setDifficulty(difficulty: GameDifficulty): void;$/;"	f
+setGameMode	core/sims.d.ts	/^    function setGameMode(mode: GameMode, player: TargetSelector): void;$/;"	f
+setGameRule	core/sims.d.ts	/^    function setGameRule(rule: GameRule, enabled: boolean): void;$/;"	f
+setItem	core/sims.d.ts	/^    function setItem(blockOrItem: number, count: number, slot: number): void;$/;"	f
+setSlot	core/sims.d.ts	/^    function setSlot(slot: number): void;$/;"	f
+setWeather	core/sims.d.ts	/^    function setWeather(weather: Weather): void;$/;"	f
+shift	core/pxt-core.d.ts	/^    shift(): T;$/;"	m
+sign	core/pxt-helpers.ts	/^    export function sign(x: number): number {$/;"	f
+sin	core/pxt-core.d.ts	/^    function sin(x: number): number;$/;"	f
+slice	core/pxt-core.d.ts	/^    slice(start: number, end?: number): string;$/;"	m
+slice	core/pxt-core.d.ts	/^    slice(start?: number, end?: number): T[];$/;"	m
+some	core/pxt-core.d.ts	/^    some(callbackfn: (value: T, index: number) => boolean): boolean;$/;"	m
+sort	core/pxt-core.d.ts	/^    sort(callbackfn?: (value1: T, value2: T) => number): T[];$/;"	m
+sortHelper	core/pxt-helpers.ts	/^    function sortHelper<T>(arr: T[], callbackfn?: (value1: T, value2: T) => number): T[] {$/;"	f
+spawn	core/sims.d.ts	/^    function spawn(mob: number, destination: Position): void;$/;"	f
+splice	core/pxt-core.d.ts	/^    splice(start: number, deleteCount: number): void;$/;"	m
+split	core/pxt-core.d.ts	/^    split(separator?: string, limit?: number): string[];$/;"	m
+splitMatch	core/pxt-helpers.ts	/^    function splitMatch(S: string, q: number, R: string): number {$/;"	f
+sqrt	core/pxt-core.d.ts	/^    function sqrt(x: number): number;$/;"	f
+string	core/ns.ts	/^        public string: string;$/;"	m
+string2	core/ns.ts	/^        public string2: string;$/;"	m
+stringEmpty	core/pxt-helpers.ts	/^    export function stringEmpty(S: string): boolean {$/;"	f
+stringReplace	core/pxt-helpers.ts	/^    export function stringReplace(s: string, toReplace: string, replacer: string | ((sub: string/;"	f
+stringReplaceAll	core/pxt-helpers.ts	/^    export function stringReplaceAll(s: string, toReplace: string, replacer: string | ((sub: str/;"	f
+stringSlice	core/pxt-helpers.ts	/^    export function stringSlice(s: string, start: number, end?: number): string {$/;"	f
+stringSplit	core/pxt-helpers.ts	/^    export function stringSplit(S: string, separator?: string, limit?: number): string[] {$/;"	f
+stringSubstr	core/pxt-helpers.ts	/^    export function stringSubstr(s: string, start: number, length?: number): string {$/;"	f
+stringToLowerCase	core/pxt-helpers.ts	/^    export function stringToLowerCase(s: string): string {$/;"	f
+stringToUpperCase	core/pxt-helpers.ts	/^    export function stringToUpperCase(s: string): string {$/;"	f
+stringTrim	core/pxt-helpers.ts	/^    export function stringTrim(s: string): string {$/;"	f
+substr	core/pxt-core.d.ts	/^    substr(start: number, length?: number): string;$/;"	m
+swap	core/pxt-helpers.ts	/^                    swap(arr, i, j);$/;"	m
+swap	core/pxt-helpers.ts	/^            swap(arr, i, len - i - 1);$/;"	m
+swap	core/pxt-helpers.ts	/^    function swap<T>(arr: T[], i: number, j: number): void {$/;"	f
+switch	core/ns.ts	/^            switch (argNames[i]) {$/;"	m
+switch	core/ns.ts	/^            switch (type) {$/;"	m
+switch	core/ns.ts	/^        switch (argName) {$/;"	m
+switch	core/pxt-helpers.ts	/^        switch (c) {$/;"	m
+switch	core/pxt-helpers.ts	/^    switch (text.charAt(start)) {$/;"	m
+tan	core/pxt-core.d.ts	/^    function tan(x: number): number;$/;"	f
+target	core/sims.d.ts	/^    function target(kind: TargetSelectorKind): TargetSelector;$/;"	f
+teleport	core/sims.d.ts	/^    function teleport(pos: Position, dir: number): void;$/;"	f
+teleport	core/sims.d.ts	/^    function teleport(to: Position): void;$/;"	f
+teleportToPlayer	core/sims.d.ts	/^    function teleportToPlayer(): void;$/;"	f
+teleportToPlayer	core/sims.d.ts	/^    function teleportToPlayer(target: TargetSelector, destination: TargetSelector): void;$/;"	f
+teleportToPosition	core/sims.d.ts	/^    function teleportToPosition(target: TargetSelector, destination: Position): void;$/;"	f
+tell	core/player.ts	/^    export function tell(target: TargetSelector, message: any) {$/;"	f
+testForBlock	core/sims.d.ts	/^    function testForBlock(block: number, pos: Position): boolean;$/;"	f
+testForBlocks	core/sims.d.ts	/^    function testForBlocks(begin: Position, end: Position, destination: Position, mask?: TestFor/;"	f
+till	core/sims.d.ts	/^    function till(direction: number): void;$/;"	f
+time	core/sims.d.ts	/^    function time(time: DayTime): number;$/;"	f
+timeAdd	core/sims.d.ts	/^    function timeAdd(amount: number): void;$/;"	f
+timeQuery	core/sims.d.ts	/^    function timeQuery(query: TimeQuery): number;$/;"	f
+timeSet	core/sims.d.ts	/^    function timeSet(time: number): void;$/;"	f
+title	core/sims.d.ts	/^    function title(target: TargetSelector, title: string, subTitle: string): void;$/;"	f
+toCompassDirection	core/sims.d.ts	/^    function toCompassDirection(deg: number): CompassDirection;$/;"	f
+toLowerCase	core/pxt-core.d.ts	/^    toLowerCase(): string;$/;"	m
+toString	core/pxt-core.d.ts	/^    toString(): string;$/;"	m
+toString	core/sims.d.ts	/^        public toString(): string;$/;"	m
+toUpperCase	core/pxt-core.d.ts	/^    toUpperCase(): string;$/;"	m
+toWorld	core/sims.d.ts	/^        public toWorld(): Position;$/;"	m
+toggleDownfall	core/sims.d.ts	/^    function toggleDownfall(): void;$/;"	f
+transfer	core/sims.d.ts	/^    function transfer(quantity: number, sourceSlot: number, destinationSlot: number): void;$/;"	f
+trim	core/pxt-core.d.ts	/^    trim(): string;$/;"	m
+trunc	core/pxt-core.d.ts	/^    function trunc(x: number): number;$/;"	f
+turn	core/sims.d.ts	/^    function turn(direction: number): void;$/;"	f
+turnLeft	core/agent.ts	/^    export function turnLeft() {$/;"	f
+turnRight	core/agent.ts	/^    export function turnRight() {$/;"	f
+uint16	core/pxt-core.d.ts	/^type uint16 = number;$/;"	t
+uint32	core/pxt-core.d.ts	/^type uint32 = number;$/;"	t
+uint8	core/pxt-core.d.ts	/^type uint8 = number;$/;"	t
+uniqueId	core/sims.d.ts	/^        public uniqueId: string;$/;"	m
+unshift	core/pxt-core.d.ts	/^    unshift(value: T): number;$/;"	m
+warningMessage	core/sims.d.ts	/^    function warningMessage(msg: string, multiline?: boolean): void;$/;"	f
+while	core/pxt-helpers.ts	/^        while (end > start && isWhitespace(s.charCodeAt(end)))$/;"	m
+while	core/pxt-helpers.ts	/^        while (k < final) {$/;"	m
+while	core/pxt-helpers.ts	/^        while (q != s) {$/;"	m
+while	core/pxt-helpers.ts	/^        while (start <= end && isWhitespace(s.charCodeAt(start)))$/;"	m
+while	core/pxt-helpers.ts	/^    while (start < text.length && helpers.isWhitespace(text.charCodeAt(start)))$/;"	m
+withinRadius	core/sims.d.ts	/^        public withinRadius(radius: number): void;$/;"	m
+world	core/helpers.ts	/^function world(x: number, y: number, z: number): Position {$/;"	f
+writeString	core/helpers.ts	/^        writeString("\\r\\n");$/;"	m
+writeString	core/helpers.ts	/^        writeString(inspect(msg));$/;"	m
+writeString	core/helpers.ts	/^    function writeString(text: string): void { }$/;"	f
+x	core/sims.d.ts	/^        public x: number;$/;"	m
+xp	core/sims.d.ts	/^    function xp(amount: number, target: TargetSelector): void;$/;"	f
+y	core/sims.d.ts	/^        public y: number;$/;"	m
+yRot	core/sims.d.ts	/^        public yRot: number;$/;"	m
+z	core/sims.d.ts	/^        public z: number;$/;"	m

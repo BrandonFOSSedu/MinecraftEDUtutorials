@@ -1,3 +1,13 @@
+# Namespaces and files
+
+- agent.ts
+- buffer.ts
+- fieldeditors.ts
+- mobs.ts
+- ns.ts
+- player.ts
+- sims.d.ts
+
 agent.ts:namespace agent {
 fieldeditors.ts:namespace agent {
 ns.ts:namespace agent {

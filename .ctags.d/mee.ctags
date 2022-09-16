@@ -1,0 +1,7 @@
+--exclude=Gemfile
+--exclude=LICENSE
+--exclude=Makefile
+--exclude=README.md
+--exclude=_config.yml
+--exclude=*.md
+--exclude=*.json
