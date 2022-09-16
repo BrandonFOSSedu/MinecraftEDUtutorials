@@ -1,0 +1,171 @@
+declare namespace positions {
+    /**
+     * Creates a new position by adding the two specified positions
+     * @param p1 the first position to add
+     * @param p2 the second position to add
+     */
+    //% help=positions/add
+    //% weight=220
+    //% blockId=minecraftAddPosition block="%p1=minecraftCreatePosition|+ %p2=minecraftCreatePosition"
+    //% blockExternalInputs=1
+    //% shim=positions::add
+    function add(p1: Position, p2: Position): Position;
+
+    /**
+     * Creates a new relative position: ~East/West, ~up/down, ~South/North
+     * @param x the East (+x) or West (-x) coordinate, in blocks
+     * @param y the up (+y) or down (-y) coordinate, in blocks
+     * @param z the South (+z) or North (-z) coordinate, in blocks
+     */
+    //% help=positions/create
+    //% weight=320
+    //% blockId=minecraftCreatePositionInternal block="~%x|~%y|~%z"
+    //% blockHidden
+    //% alias=pos
+    //% shim=positions::create
+    function create(x: number, y: number, z: number): Position;
+
+    /**
+     * Creates a new local position: ~left/right, ~up/down, ~forwards/backwards
+     * @param x the left (+x) or right (-x) coordinate, in blocks
+     * @param y the up (+y) or down (-y) coordinate, in blocks
+     * @param z the forwards (+z) or backwards (-z) coordinate, in blocks
+     */
+    //% help=positions/create-local
+    //% weight=315
+    // blockId=minecraftCreatePositionLocalInternal block="^$x|^$y|^$z"
+    //% blockHidden
+    //% alias=posLocal
+    //% shim=positions::createLocal
+    function createLocal(x: number, y: number, z: number): Position;
+
+    /**
+     * Creates a new local position: ~left/right, ~up/down, ~forwards/backwards
+     * @param x the left (+x) or right (-x) coordinate, in blocks
+     * @param y the up (+y) or down (-y) coordinate, in blocks
+     * @param z the forwards (+z) or backwards (-z) coordinate, in blocks
+     */
+    //% alias=posCamera
+    //% shim=positions::createCamera
+    function createCamera(x: number, y: number, z: number): Position;
+
+    /**
+     * Creates a new world position: East/West, up/down, South/North
+     * @param x the East (+x) or West (-x) coordinate, in blocks
+     * @param y the up (+y) or down (-y) coordinate, in blocks
+     * @param z the South (+z) or North (-z) coordinate, in blocks
+     */
+    //% help=positions/create-world
+    //% weight=310 blockGap=60
+    //% blockId=minecraftCreateWorldInternal block="world %x|%y|%z"
+    //% blockHidden
+    //% alias=world
+    //% shim=positions::createWorld
+    function createWorld(x: number, y: number, z: number): Position;
+
+    /**
+     * Creates a new position with a mix of relative and absolute coordinates, or local coordinates
+     * @param x the East (+x) or West (-x) coordinate, in blocks
+     * @param y the up (+y) or down (-y) coordinate, in blocks
+     * @param z the South (+z) or North (-z) coordinate, in blocks
+     */
+    //%
+    //% shim=positions::createHybrid
+    function createHybrid(xRaw: string, yRaw: string, zRaw: string): Position;
+
+    /**
+     * Picks a random position within the specified cubic region
+     * @param p1 the position of the first corner of the cubic region
+     * @param p2 the position of the opposite corner of the cubic region
+     */
+    //% help=positions/random
+    //% weight=210 blockGap=60
+    //% blockId=minecraftPosRandomInternal block="pick random position|from %p1=minecraftCreatePosition|to %p2=minecraftCreatePosition"
+    //% blockExternalInputs=1
+    //% blockHidden
+    //% alias=randpos
+    //% shim=positions::random
+    function random(p1: Position, p2: Position): Position;
+
+    /**
+     * Finds the ground under the given position and returns the coordinates of the next air block just above it. If
+     * the given block is solid, the next air block underneath is found, and the scan starts from there. Liquids are
+     * considered solid.
+     * @param pos the position under which to find the ground
+     */
+    //% help=positions/ground-position
+    //% promise
+    //% weight=50
+    //% blockId=minecraftNextSolid block="ground at $pos=minecraftCreatePosition"
+    //% shim=positions::groundPositionAsync promise
+    function groundPosition(pos: Position): Position;
+
+    /**
+     * Converts an angle in degrees to the closest CompassDirection
+     * @param deg the orientation (in degrees) to find the compass direction for
+     */
+    //% weight=40
+    //% blockId=minecraftToCompassDirection block="orientation $deg to compass direction"
+    //% shim=positions::toCompassDirection
+    function toCompassDirection(deg: number): CompassDirection;
+
+}
+    /**
+     * A world coordinate that may be relative (~) or local (^) to the player position.
+     */
+    //% color=#69B090
+    //% snippet=pos(0,0,0) pySnippet=pos(0,0,0)
+    declare class Position {
+        /**
+         * Returns a string representation of this position
+         */
+        //% help=positions/to-string
+        //% blockId="minecraftPositionToString" block="%position|to string"
+        //% blockNamespace=positions weight=110 color=#69B090
+        //% blockGap=60
+        //% shim=.toString
+        public toString(): string;
+
+        /**
+         * Adds the offset and returns a new position
+         */
+        //%
+        //% shim=.add
+        public add(offset: Position): Position;
+
+        /**
+         * Creates a new world position by converting this position to a world position
+         */
+        //% help=positions/to-world
+        //% promise
+        //% blockId=minecraftPositionToWorld block="%position|to world"
+        //% blockNamespace=positions weight=120 color=#69B090
+        //% shim=.toWorldAsync promise
+        public toWorld(): Position;
+
+        /**
+         * Gets the value of the specified coordinate: x, y or z
+         * @param direction the axis for which to return the coordinate value
+         */
+        //% help=positions/get-value
+        //% blockId=minecraftPosGet block="%position|get value of %direction"
+        //% blockNamespace=positions weight=130 color=#69B090
+        //% shim=.getValue
+        public getValue(direction: Axis): number;
+
+        /**
+         * Gets a value that indicates if the coordinate is relative to the user
+         */
+        //%
+        //% shim=.isRelative
+        public isRelative(direction: Axis): boolean;
+
+        /**
+         * Returns a position moved by the given blocks
+         */
+        //%
+        //% shim=.move
+        public move(direction: CardinalDirection, blocks: number): Position;
+
+    }
+d

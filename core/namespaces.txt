@@ -1,0 +1,26 @@
+agent.ts:namespace agent {
+fieldeditors.ts:namespace agent {
+ns.ts:namespace agent {
+sims.d.ts:declare namespace agent {
+
+ns.ts:namespace player {
+player.ts:namespace player {
+sims.d.ts:declare namespace player {
+
+fieldeditors.ts:namespace mobs {
+mobs.ts:namespace mobs {
+ns.ts:namespace mobs { }
+sims.d.ts:declare namespace mobs {
+sims.d.ts:declare namespace mobs {
+
+fieldeditors.ts:namespace blocks {
+ns.ts:namespace blocks {
+sims.d.ts:declare namespace blocks {
+
+ns.ts:namespace gameplay { }
+sims.d.ts:declare namespace gameplay {
+
+ns.ts:namespace positions { }
+sims.d.ts:declare namespace positions {
+
+helpers.ts:namespace console {

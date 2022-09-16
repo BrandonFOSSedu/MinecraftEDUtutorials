@@ -1,0 +1,252 @@
+namespace player {
+
+export class ChatCommandArguments {
+        public number: number;
+        public number2: number;
+        public string: string;
+        public string2: string;
+        public position: Position;
+        public position2: Position;
+        public selector: TargetSelector;
+        public selector2: TargetSelector;
+    }
+
+function getArgumentName(argName: ChatArgument): string 
+
+function parseCommandArgs(argNames: ChatArgument[]): ChatCommandArguments 
+
+function commandArgsHelp(commandName: string, argNames: ChatArgument[]): string 
+
+function commandArgsHelp(commandName: string, argNames: ChatArgument[]): string 
+
+function commandArgsHelp(commandName: string, argNames: ChatArgument[]): string 
+
+export function say(message: any) 
+
+export function tell(target: TargetSelector, message: any) 
+
+ /**
+     * Returns the name of the current player (you)
+     */
+    //% help=player/name
+    //% weight=240
+    //% blockId=minecraftMyName block="player name"
+    //% shim=player::name
+    function name(): string;
+
+/**
+     * Teleports the current player to another position
+     * @param to the destination position
+     */
+    //% help=player/teleport
+    //% promise
+    //% weight=330
+    //% blockId=minecraftPlayerTeleport block="teleport to %to=minecraftCreatePosition"
+    //% shim=player::teleportAsync promise
+    function teleport(to: Position): void;
+
+ /**
+     * Gets the last message, if any
+     */
+    //%
+    //% shim=player::message
+    function message(): string;
+
+ /**
+     * Runs code when another player whispers you a certain message
+     * @param command the chat keyword that will be associated with this command (``*`` for all messages), eg: "jump"
+     */
+    //% help=player/on-tell-command
+    //% promise
+    //% weight=120
+    //% blockId=minecraftOnTellCommand block="on tell command %command"
+    //% shim=player::onTellCommandAsync promise
+    function onTellCommand(command: string, handler: () => void): void;
+
+ /**
+     * Executes a chat command in your code
+     * @param command the chat command to run, eg: "jump"
+     */
+    //% help=player/run-chat-command
+    //% weight=140
+    //% blockId=minecraftRunChatCommand block="run chat command %command"
+    //% shim=player::runChatCommand
+    function runChatCommand(command: string): void;
+
+
+    /**
+     * Executes a chat command in your code with arguments
+     * @param command the chat command to run, eg: "jump"
+     * @param arg a string containing all the arguments you wish to give to the chat command
+     */
+    //% help=player/run-chat-command-with-args
+    //% weight=130
+    //% blockId=minecraftRunChatCommandArgs block="run chat command %command|with %arg"
+    //% arg.shadowOptions.toString=true
+    //% shim=player::runChatCommandWithArguments
+    function runChatCommandWithArguments(command: string, arg: string): void;
+
+    /**
+     * Runs code when the current player dies
+     */
+    //% help=player/on-died
+    //% promise
+    //% weight=310 blockGap=60
+    //% blockId=minecraftPlayerDied block="on player died"
+    //% shim=player::onDiedAsync promise
+    function onDied(handler: () => void): void;
+
+
+    /**
+     * Runs code when the current player travels in a certain way
+     * @param method the travel method
+     */
+    //% help=player/on-travelled
+    //% promise
+    //% weight=320
+    //% blockId=minecraftPlayerTravelled block="on player %method"
+    //% topblock topblockWeight=90
+    //% shim=player::onTravelledAsync promise
+    function onTravelled(method: TravelMethod, handler: () => void): void;
+
+    /**
+     * Runs code when the current player gets teleported
+     */
+    //% help=player/on-teleported
+    //% promise
+    //% weight=110
+    //% blockId=minecraftPlayerOnTeleported block="on player teleported"
+    //% shim=player::onTeleportedAsync promise
+    function onTeleported(handler: () => void): void;
+
+    /**
+     * Runs code when the current player bounces on a slime
+     */
+    //% help=player/on-bounced
+    //% promise
+    //% weight=1
+    //% blockId=minecraftPlayerBounced block="on player bounced"
+    //% deprecated=true
+    //% shim=player::onBouncedAsync promise
+    function onBounced(handler: () => void): void;
+
+    /**
+     * Runs code when a picture is taken with a camera
+     */
+    //% help=player/on-camera-used
+    //% promise
+    //% weight=1
+    //% blockId=minecraftOnCameraUsed block="on camera used"
+    //% deprecated=true
+    //% shim=player::onCameraUsedAsync promise
+    function onCameraUsed(handler: () => void): void;
+
+    /**
+     * Runs code when the current player shoots an arrow
+     */
+    //% help=player/on-arrow-shot
+    //% promise
+    //% weight=210 blockGap=60
+    //% blockId=minecraftOnArrowShot block="on arrow shot"
+    //% shim=player::onArrowShotAsync promise
+    function onArrowShot(handler: () => void): void;
+
+    /**
+     * Returns the world position of the current player
+     */
+    //% help=player/position
+    //% promise
+    //% weight=250
+    //% blockId=minecraftMyPosition block="player world position"
+    //% shim=player::positionAsync promise
+    function position(): Position;
+
+    /**
+     * Executes a game command as the current player
+     * @param command the slash command to execute (you do not have to put the leading ``/``), eg: "say Hi!"
+     */
+    //% help=player/execute
+    //% promise
+    //% weight=230
+    //% blockId=minecraftExecute block="execute %command"
+    //% blockExternalInputs=1
+    //% shim=player::executeAsync promise
+    function execute(command: string): void;
+
+    /**
+     * Runs code when a keyword is typed in the chat
+     * @param command the chat keyword that will be associated with this command (``*`` for all messages), eg: "jump"
+     */
+    //%
+    //% shim=player::onChatCommandCoreAsync promise
+    function onChatCommandCore(command: string, handler: () => void): void;
+
+    /**
+     * Runs code when an item is used
+     */
+    //% help=player/on-item-used
+    //% promise
+    //% weight=350
+    //% blockId=minecraftOnItemInteracted block="on $item|used"
+    //% item.shadow=minecraftItem
+    //% shim=player::onItemInteractedAsync promise
+    function onItemInteracted(item: number, handler: () => void): void;
+
+    /**
+     * Gets the specified argument from the latest player chat message
+     * @param index
+     */
+    //%
+    //% shim=player::getChatArg
+    function getChatArg(index: number): string;
+
+    /**
+     * Gets the arguments for the specified command
+     * @param command the chat command for which to get the args
+     */
+    //%
+    // NOTE: This returns a RefCollection, but because of the way our sim typings are set up, we cannot declare
+    // RefCollection as the return type. We instead use string[] in the signature, while actually returning a
+    // RefCollection cast as <any>.
+    //% shim=player::getChatArgs
+    function getChatArgs(command: string): string[];
+
+    /**
+     * Displays a chat command help message in the game chat.
+     *
+     * @param helpStr The formatted syntax of the command
+     */
+    //% promise
+    //% shim=player::chatCommandSyntaxErrorAsync promise
+    function chatCommandSyntaxError(helpStr: string): void;
+
+    /**
+     * Displays an error in the game chat
+     *
+     * @param msg The error to display in the game chat
+     */
+    //% promise
+    //% shim=player::errorMessageAsync promise
+    function errorMessage(msg: string, multiline?: boolean): void;
+
+    /**
+     * Displays a warning in the game chat (orange text)
+     *
+     * @param msg The warning to display in the game chat
+     */
+    //% promise
+    //% shim=player::warningMessageAsync promise
+    function warningMessage(msg: string, multiline?: boolean): void;
+
+    /**
+     * Returns the player's orientation, in degrees
+     */
+    //% promise
+    //% weight=245
+    //% blockId=minecraftPlayerGetOrientation block="player orientation"
+    //% shim=player::getOrientationAsync promise
+    function getOrientation(): number;
+
+
+
+

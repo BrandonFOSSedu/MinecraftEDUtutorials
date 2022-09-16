@@ -1,2 +1,5 @@
 Introduction to variables: https://minecraft.makecode.com/#tutorial:86840-27407-97073-11745
 Get and Set Functions: https://minecraft.makecode.com/#tutorial:70340-37355-14323-32743
+Calculator Tutorial: https://minecraft.makecode.com/#tutorial:69695-38642-72567-23795
+Strings Tutorial: https://minecraft.makecode.com/#tutorial:38035-85513-63792-50571
+Using Functions Tutorial: https://minecraft.makecode.com/#tutorial:73577-61808-24226-39343 

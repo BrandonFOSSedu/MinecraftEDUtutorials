@@ -39,7 +39,7 @@ function goHome()
     gameplay.setGameMode( CREATIVE, mobs.target(LOCAL_PLAYER))
     blocks.fill( DIRT, pos(5, -1, 5), pos(-5, 5, 5), FillOperation.Replace)
     blocks.fill( DIRT, pos(5, -1, 5), pos(5, 5, -5), FillOperation.Replace)
-    blocks.fill (DIRT, pos(-5, -1, -5), pos(-5, 5, 5), FillOperation.Replace)
+    blocks.fill( DIRT, pos(-5, -1, -5), pos(-5, 5, 5), FillOperation.Replace)
     blocks.fill( DIRT, pos(-5, -1, -5), pos(5, 5, -5), FillOperation.Replace)
     blocks.fill( DIRT, pos(-5, 6, -5), pos(5, 6, 5), FillOperation.Replace)
 }
@@ -49,7 +49,7 @@ function showBlocks()
     player.say("Spawning blocks in a row");
     for (let i: number = 0; i <= 400; i++) 
     {
-            blocks.place(i, pos(i, 0, 0))
+            blocks.place( i, pos(i, 0, 0))
     }
 }
 
@@ -59,34 +59,35 @@ function showBlocks()
 
 // New onChat commands
 
-player.onChat("blocks", showBlocks);
+player.onChat( "blocks",
+	       showBlocks);
 
-player.onChat("home", goHome);
+player.onChat( "home", 
+               goHome);
 
-player.onChat("anon", 
-              function()
-              {
-                  player.say("Running anonymous function");
-                  agent.teleportToPlayer();
-              }
+player.onChat( "anon", 
+               function()
+               {
+                   player.say("Running anonymous function");
+                   agent.teleportToPlayer();
+               }
 )	
-player.onChat("sus", 
-              function() 
-              {
-	          player.say("Sussy agent...");
-              }
-)
-
-// Type the commands in the chat console
-
-
-
-// Creating new event-driven commands
 ```
 
-## Practice
-Run the functions
+## Practice Calling Functions
+
+On a new line, call the user defined functions by typing the name of the function with parenthesis.
 
 ```typescript
 goHome();
+showBlocks();
+oops();
 ```
+
+## Practice Triggering onChat Commands
+
+In the chat console in Minecraft, type out the words ``home``, ``blocks``, and ``anon``. 
+
+## Create your own functions
+
+Add new function definitions and onChat commands to run your custom code. Use the code selector to drag Makecode built-in functions in order to help you create new functionality.

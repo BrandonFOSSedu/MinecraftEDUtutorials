@@ -1,0 +1,289 @@
+namespace mobs {
+     //%
+    declare class QueryTargetResult {
+        //%
+        //% shim=.dimension
+        public dimension: number;
+
+        //%
+        //% shim=.yRot
+        public yRot: number;
+
+        //%
+        //% shim=.uniqueId
+        public uniqueId: string;
+
+        //%
+        //% shim=.x
+        public x: number;
+
+        //%
+        //% shim=.y
+        public y: number;
+
+        //%
+        //% shim=.z
+        public z: number;
+
+    }
+
+
+   /**
+     * Queries information about a given target
+     * @param target a target selector that determines the entity you're querying
+     */
+    //%
+    export function queryTarget(target: TargetSelector): QueryTargetResult[] {
+        return _queryTargetCore(target);
+    }
+
+    /**
+     * Effect field
+     * @param effect an effect
+     */
+    //% blockId=minecraftEffectField block="%effect"
+    //% effect.fieldEditor="gridpicker"
+    //% effect.fieldOptions.width=340 effect.fieldOptions.columns=8 effect.fieldOptions.tooltips=true
+    //% effect.fieldOptions.tooltipsXOffset="20" effect.fieldOptions.tooltipsYOffset="-20"
+    //% effect.fieldOptions.maxRows="8"
+    //% effect.fieldOptions.hasSearchBar=true
+    //% effect.fieldOptions.hideRect=true
+    //% shim=TD_ID blockHidden=1 weight=0
+    export function __effect(effect: Effect): number {
+        return effect;
+    }
+
+    /**
+     * Represents an animal from the game
+     * @param name the type of the animal
+     */
+    //% help=mobs/animal
+    //% weight=320
+    //% shim=TD_ID blockId=minecraftAnimal block="animal %name"
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=340 name.fieldOptions.columns=8 name.fieldOptions.tooltips=true
+    //% name.fieldOptions.maxRows="8"
+    //% name.fieldOptions.hideRect=true
+    export function animal(name: AnimalMob): number {
+        return name;
+    }
+
+    /**
+     * Represents a monster from the game
+     * @param name the type of the monster
+     */
+    export function __monster(name: MonsterMob): number {
+        return name;
+    }
+
+    /**
+     * Represents a projectile from the game
+     * @param name the type of the projectile
+     */
+    //% help=mobs/projectile
+    //% shim=TD_ID blockId=minecraftProjectile block="projectile %name"
+    //% weight=305 blockGap=60
+    export function projectile(name: ProjectileMob): number {
+        return name;
+    }
+
+    /**
+     * Summons a creature at a given location
+     * @param mob the type of creature to summon
+     * @param destination the coordinates at which to summon the creature
+     */
+    //% help=mobs/spawn
+    //% promise
+    //% weight=350
+    //% blockId=minecraftSummon block="spawn %entity=minecraftAnimal|at %destination=minecraftCreatePosition"
+    //% entity.shadow=minecraftAnimal
+    //% topblock topblockWeight=80
+    //% mob.defl=CHICKEN
+    //% shim=mobs::spawnAsync promise
+    function spawn(mob: number, destination: Position): void;
+
+    /**
+     * Runs code when a creature of a certain type is killed
+     * @param mob the type of creature
+     */
+    //% help=mobs/on-mob-killed
+    //% weight=340
+    //% blockId=minecraftMobKilled block="on %mob=minecraftAnimal|killed"
+    //% mob.shadow=minecraftAnimal
+    //% mob.defl=CHICKEN
+    //% shim=mobs::onMobKilledAsync promise
+    function onMobKilled(mob: number, handler: () => void): void;
+
+    /**
+     * Applies a status effect to the specified target
+     * @param target a target selector that determines which entity will receive the effect
+     * @param effect the effect to apply
+     * @param duration the duration of the effect
+     * @param amplifier the amplifier of the effect
+     */
+    //% promise
+    //% weight=0
+    //% blockId=minecraftEffect block="apply %effect to %target=minecraftTarget||duration %duration amplifier %amplifier"
+    //% expandableArgumentMode=toggle
+    //% duration.min=0 duration.max=600 duration.defl=10
+    //% amplifier.min=0 amplifier.max=255 amplifier.defl=1
+    //% inlineInputMode="inline"
+    //% effect.fieldEditor="gridpicker"
+    //% effect.fieldOptions.width=340 effect.fieldOptions.columns=8 effect.fieldOptions.tooltips=true
+    //% effect.fieldOptions.tooltipsXOffset="20" effect.fieldOptions.tooltipsYOffset="-20"
+    //% effect.fieldOptions.maxRows="8"
+    //% effect.fieldOptions.hasSearchBar=true
+    //% effect.fieldOptions.hideRect=true
+    //% deprecated=true
+    //% shim=mobs::effectAsync promise
+    function effect(effect: Effect, target: TargetSelector, duration?: number, amplifier?: number): void;
+
+    /**
+     * Applies a status effect to the specified target
+     * @param target a target selector that determines which entity will receive the effect
+     * @param effect the effect to apply
+     * @param duration the duration of the effect
+     * @param amplifier the amplifier of the effect
+     */
+    //% promise
+    //% weight=270 help=mobs/apply-effect
+    //% blockId=minecraftApplyEffect block="apply %effect=minecraftEffectField|to %target=minecraftTarget|duration %duration amplifier %amplifier"
+    //% duration.min=0 duration.max=600 duration.defl=10
+    //% amplifier.min=0 amplifier.max=255 amplifier.defl=1
+    //% inlineInputMode="inline"
+    //% shim=mobs::applyEffectAsync promise
+    function applyEffect(effect: number, target: TargetSelector, duration?: number, amplifier?: number): void;
+
+    /**
+     * Clears all status effects from the specified target
+     * @param target a target selector that determines which entity will be cleared of effects
+     */
+    //% promise
+    //% weight=260 help=mobs/clear-effect
+    //% blockId=minecraftClearEffect block="clear all effects from %target=minecraftTarget"
+    //% shim=mobs::clearEffectAsync promise
+    function clearEffect(target: TargetSelector): void;
+
+    /**
+     * Gives blocks or items from the game to the specified players
+     * @param target a target selector that determines which players will receive the block or item
+     * @param block the block or item to give
+     * @param amount the quantity to give, eg: 1
+     */
+    //% help=mobs/give
+    //% promise
+    //% weight=240
+    //% blockId=minecraftGive block="give %target=minecraftTarget|block or item %block=minecraftBlock|amount %amount"
+    //% block.shadow=minecraftBlock
+    //% blockExternalInputs=1
+    //% shim=mobs::giveAsync promise
+    function give(target: TargetSelector, block: number, amount: number): void;
+
+    /**
+     * Teleports entities to another location
+     * @param target a target selector that determines which entities will be teleported
+     * @param destination the coordinates where the selected entities will be teleported to
+     */
+    //% help=mobs/teleport-to-position
+    //% promise
+    //% weight=230
+    //% blockId=minecraftTeleport block="teleport %target=minecraftTarget|to %destination=minecraftCreatePosition"
+    //% blockExternalInputs=1
+    //% shim=mobs::teleportToPositionAsync promise
+    function teleportToPosition(target: TargetSelector, destination: Position): void;
+
+    /**
+     * Teleports entities to a player
+     * @param target a target selector that determines which entities will be teleported
+     * @param destination a target selector that determines which player the entities will be teleported to
+     */
+    //% help=mobs/teleport-to-player
+    //% promise
+    //% weight=220
+    //% blockId=minecraftTeleportToPlayer block="teleport %target=minecraftTarget|to %destination=minecraftTarget"
+    //% blockExternalInputs=1
+    //% shim=mobs::teleportToPlayerAsync promise
+    function teleportToPlayer(target: TargetSelector, destination: TargetSelector): void;
+
+    /**
+     * Applies a certain enchantment to the specified targets
+     * @param target a target selector that determines which players will receive the enchantment
+     * @param spell the code name of the enchantment, eg: "infinity"
+     * @param level the strength level of the enchantment, eg: 1
+     */
+    //% help=mobs/enchant
+    //% promise
+    //% weight=210 blockGap=60
+    //% blockId=minecraftEnchant block="enchant %target=minecraftTarget|with %spell|of level %level"
+    //% inlineInputMode="external"
+    //% shim=mobs::enchantAsync promise
+    function enchant(target: TargetSelector, spell: string, level: number): void;
+
+    /**
+     * Kills the selected entities
+     * @param target a target selector that determines which entities will be killed
+     */
+    //% help=mobs/kill
+    //% promise
+    //% weight=330
+    //% blockId=minecraftKill block="kill %target=minecraftTarget"
+    //% blockExternalInputs=1
+    //% shim=mobs::killAsync promise
+    function kill(target: TargetSelector): void;
+
+    /**
+     * Executes a command as other targets
+     * @param target a target selector that determines which entities will execute the command
+     * @param position the coordinates from which to run the command
+     * @param command the full command which the selected targets will execute, eg: "say Hi!"
+     */
+    //% help=mobs/execute
+    //% weight=110 blockGap=30
+    //% blockId=minecraftExecuteAsOther block="execute as %target=minecraftTarget|at %position=minecraftCreatePosition|command %command"
+    //% blockExternalInputs=1
+    //% shim=mobs::executeAsync promise
+    function execute(target: TargetSelector, position: Position, command: string): void;
+
+    /**
+     * Queries information about a given target
+     * @param target a target selector that determines the entity you're querying
+     */
+    // NOTE: This returns a RefCollection, but because of the way our sim typings are set up, we cannot declare
+    // RefCollection as the return type. We instead use QueryTargetResult[] in the signature, while actually
+    // returning a RefCollection cast as <any>.
+    //%
+    //% shim=mobs::_queryTargetCoreAsync promise
+    function _queryTargetCore(target: TargetSelector): QueryTargetResult[];
+
+    /**
+     * Executes a command if a certain block type is detected at the specified position
+     * @param detectPosition the position at which to detect the block
+     * @param detectBlock the block type to test for
+     * @param command the full command which the selected targets will execute if the specified block is successfully detected, eg: "say Hi!"
+     */
+    //% help=mobs/execute-detect
+    //% weight=120
+    //% blockId=minecraftExecuteDetect block="detect block %block=minecraftBlock|at %detectPosition=minecraftCreatePosition|if found, run command %command"
+    //% block.shadow=minecraftBlock
+    //% blockExternalInputs=1
+    //% shim=mobs::executeDetectAsync promise
+    function executeDetect(detectBlock: number, detectPosition: Position, command: string): void;
+
+    /**
+     * Represents a monster from the game
+     * @param name the type of the monster
+     */
+    //% help=mobs/monster
+    //% blockId=minecraftMonster block="monster %name"
+    //% weight=310
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=340 name.fieldOptions.columns=8 name.fieldOptions.tooltips=true
+    //% name.fieldOptions.maxRows="8"
+    //% name.fieldOptions.hideRect=true
+    //% shim=mobs::monster
+    function monster(name: MonsterMob): number;
+
+
+
+
+

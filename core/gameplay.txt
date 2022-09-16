@@ -1,0 +1,159 @@
+declare namespace gameplay {
+    /**
+     * Change the game mode for the selected players
+     * @param mode the desired game mode
+     * @param player a selector to determine which players to change the game mode for
+     */
+    //% help=gameplay/set-game-mode
+    //% promise
+    //% weight=210 blockGap=60
+    //% blockId=minecraftGamemode block="change game mode to %mode|for %player=minecraftTarget"
+    //% blockExternalInputs=1
+    //% mode.defl=SURVIVAL
+    //% shim=gameplay::setGameModeAsync promise
+    function setGameMode(mode: GameMode, player: TargetSelector): void;
+
+    /**
+     * Set the current time of day to a preset time or a custom hour, in game ticks
+     * @param time the desired time of day, eg: DayTime.Day
+     */
+    //% help=gameplay/time-set
+    //% promise
+    //% weight=320
+    //% blockId=minecraftTimeSet block="time set %time=minecraftTime"
+    //% shim=gameplay::timeSetAsync promise
+    function timeSet(time: number): void;
+
+    /**
+     * Add ticks to the current time of day
+     * @param amount the number of ticks to add to the current time of day, eg: 100
+     */
+    //% help=gameplay/time-add
+    //% promise
+    //% weight=310 blockGap=60
+    //% blockId=minecraftTimeAdd block="time add %amount"
+    //% shim=gameplay::timeAddAsync promise
+    function timeAdd(amount: number): void;
+
+    /**
+     * Get the current time of day, in game ticks
+     * @param query the type of time to query
+     */
+    //% help=gameplay/time-query
+    //% promise
+    //% weight=130
+    //% blockId=minecraftTimeQuery block="time query %query"
+    //% shim=gameplay::timeQueryAsync promise
+    function timeQuery(query: TimeQuery): number;
+
+    /**
+     * Get the current time of day, in game ticks
+     * @param query the type of time to query
+     */
+    //% help=gameplay/daylight-time-query
+    //% promise
+    //% weight=125
+    //% blockId=minecraftDaylightTimeQuery block="is time $query"
+    //% shim=gameplay::isDaylightTimeAsync promise
+    function isDaylightTime(query: DayTime): boolean;
+
+    /**
+     * Represents a preset time of the day
+     * @param time a preset time, eg: DateTime.Day
+     */
+    //% blockId=minecraftTime block="%time" blockHidden=1
+    //% weight=2
+    //% shim=gameplay::time
+    function time(time: DayTime): number;
+
+    /**
+     * Change the current weather.
+     * @param weather the desired weather
+     */
+    //% help=gameplay/set-weather
+    //% promise
+    //% weight=340
+    //% blockId=minecraftWeather block="weather %weather"
+    //% weather.defl=CLEAR
+    //% shim=gameplay::setWeatherAsync promise
+    function setWeather(weather: Weather): void;
+
+    /**
+     * Starts raining if it isn't, or stops raining if it is.
+     */
+    //% help=gameplay/toggle-downfall
+    //% promise
+    //% weight=330
+    //% blockId=minecraftToggleDownfall block="toggle downfall"
+    //% shim=gameplay::toggleDownfallAsync promise
+    function toggleDownfall(): void;
+
+    /**
+     * Give experience points to the selected players
+     * @param amount the number of experience points to give, eg: 10
+     * @param target a selector to determine which players to give experience points to
+     */
+    //% help=gameplay/xp
+    //% promise
+    //% weight=120
+    //% blockId=minecraftXp block="xp give %amount|to %target=minecraftTarget"
+    //% shim=gameplay::xpAsync promise
+    function xp(amount: number, target: TargetSelector): void;
+
+    /**
+     * Enable or disable a game rule
+     * @param rule the game rule to change
+     * @param enabled whether the specified rule is enabled or not
+     */
+    //% help=gameplay/set-game-rule
+    //% promise
+    //% weight=110
+    //% blockId=minecraftGameRule block="change game rule %rule|to %enabled"
+    //% rule.defl=DAYLIGHT_CYCLE
+    //% shim=gameplay::setGameRuleAsync promise
+    function setGameRule(rule: GameRule, enabled: boolean): void;
+
+    /**
+     * Change whether the world can be altered or not
+     * @param enabled true if modifying the world is allowed, false if not
+     */
+    //% help=gameplay/immutable-world
+    //% promise
+    //% blockId=minecraftImmutableWorld block="immutable world %enabled"
+    //% deprecated=true weight=1
+    //% shim=gameplay::immutableWorldAsync promise
+    function immutableWorld(enabled: boolean): void;
+
+    /**
+     * Changes the game difficulty
+     * @param difficulty the new difficulty
+     */
+    //% help=gameplay/set-difficulty
+    //% promise
+    //% weight=220
+    //% blockId=setDifficulty block="set difficulty to %difficulty"
+    //% shim=gameplay::setDifficultyAsync promise
+    function setDifficulty(difficulty: GameDifficulty): void;
+
+    /**
+     * Shows a title and subtitle to the selected targets
+     * @param target the players and entities to select
+     * @param title the large title to display
+     * @param subTitle the subtitle to display
+     */
+    //% help=gameplay/title
+    //% promise
+    //% weight=200
+    //% blockId=minecraftTitle block="show %target=minecraftTarget|title %title|subtitle %subTitle"
+    //% shim=gameplay::titleAsync promise
+    function title(target: TargetSelector, title: string, subTitle: string): void;
+
+    /**
+     * Closes the chat window if it is open (EE only)
+     */
+    //% promise
+    //% shim=gameplay::dismissChatAsync promise
+    function dismissChat(): void;
+
+}
+d

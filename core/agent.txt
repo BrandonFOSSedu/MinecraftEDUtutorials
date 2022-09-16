@@ -1,0 +1,348 @@
+namespace agent {
+    /**
+     * Turn the agent left by 90 degrees.
+     */
+    //% help=agent/turn
+    //% blockId=agentturnleft block="agent turn left"
+    //% blockHidden=1
+    export function turnLeft() {
+        agent.turn(TurnDirection.Left);
+    }
+
+    /**
+     * Turn the agent right by 90 degrees.
+     */
+    //% help=agent/turn
+    //% blockId=agentturnright block="agent turn right"
+    //% blockHidden=1
+    export function turnRight() {
+        agent.turn(TurnDirection.Right);
+    }
+
+    //% shim=TD_ID
+    //% blockId=minecraftAgentSixDirection
+    //% block="$direction"
+    export function _sixDirection(direction: SixDirection): number {
+        return direction;
+    }
+
+    //% shim=TD_ID
+    //% blockId=minecraftAgentTurnDirection
+    //% block="$direction"
+    export function _turnDirection(direction: TurnDirection): number {
+        return direction;
+    }
+
+    //% shim=TD_ID
+    //% blockId=minecraftAgentCompassDirection
+    //% block="$direction"
+    export function _compassDirection(direction: CompassDirection): number {
+        return direction;
+    }
+
+    /**
+     * Requests the agent to move in the specified direction
+     * @param direction the direction in which the agent will move
+     * @param blocks how far the agent should move, in blocks, eg: 1
+     */
+    //% help=agent/move
+    //% promise
+    //% weight=370
+    //% blockId=minecraftAgentMove block="agent move %direction|by %blocks"
+    //% topblock topblockWeight=63
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::moveAsync promise
+    function move(direction: number, blocks: number): void;
+
+    /**
+     * Turns the agent in the specified direction
+     * @param direction the turn direction, eg: TurnDirection.Left
+     */
+    //% help=agent/turn
+    //% promise
+    //% weight=360
+    //% blockId=minecraftAgentTurn block="agent turn %direction"
+    //% topblock topblockWeight=60
+    //% direction.shadow=minecraftAgentTurnDirection
+    //% shim=agent::turnAsync promise
+    function turn(direction: number): void;
+
+    /**
+     * Returns the agent's position in world coordinates
+     */
+    //% help=agent/get-position
+    //% promise
+    //% weight=350
+    //% blockId=minecraftAgentGetPosition block="agent position"
+    //% shim=agent::getPositionAsync promise
+    function getPosition(): Position;
+
+    /**
+     * Returns the agent's orientation, in degrees
+     */
+    //% help=agent/get-orientation
+    //% promise
+    //% weight=340
+    //% blockId=minecraftAgentGetOrientation block="agent orientation"
+    //% shim=agent::getOrientationAsync promise
+    function getOrientation(): number;
+
+    /**
+     * Places an item or block in the world from the agent's currently selected inventory slot
+     * @param direction the direction in which to place the item
+     */
+    //% help=agent/place
+    //% promise
+    //% group="Actions" weight=270
+    //% blockId=minecraftAgentPlace block="agent place %direction"
+    //% topblock topblockWeight=55
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::placeAsync promise
+    function place(direction: number): void;
+
+    /**
+     * Interacts with an item
+     * @param direction the direction in which to place the item
+     */
+    //% help=agent/interact
+    //% promise
+    //% group="Actions" weight=265
+    //% blockId=minecraftAgentInteract block="agent interact $direction"
+    //% topblockWeight=54
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::interactAsync promise
+    function interact(direction: number): void;
+
+    /**
+     * Detects if there is a block next to the agent in the specified direction
+     * @param kind what the agent should attempt to detect
+     * @param direction the direction in which to perform the detection
+     */
+    //% help=agent/detect
+    //% promise
+    //% weight=205
+    //% blockId=minecraftAgentDetect block="agent detect %kind|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% group="Actions"
+    //% blockGap=8
+    //% shim=agent::detectAsync promise
+    function detect(kind: AgentDetection, direction: number): boolean;
+
+    /**
+     * Commands the agent to destroy a block in the given direction
+     * @param direction the direction in which the agent will destroy a block
+     */
+    //% help=agent/destroy
+    //% promise
+    //% group="Actions" weight=260
+    //% blockId=minecraftAgentCommandDestroy block="agent destroy|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::destroyAsync promise
+    function destroy(direction: number): void;
+
+    /**
+     * Commands the agent to till soil in the given direction
+     * @param direction the direction in which to till the soil
+     */
+    //% help=agent/till
+    //% promise
+    //% group="Actions" weight=250
+    //% blockId=minecraftAgentCommandTill block="agent till|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::tillAsync promise
+    function till(direction: number): void;
+
+    /**
+     * Commands the agent to attack in the given direction
+     * @param direction the direction in which to attack
+     */
+    //% help=agent/attack
+    //% promise
+    //% group="Actions" weight=240
+    //% blockId=minecraftAgentCommandAttack block="agent attack|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::attackAsync promise
+    function attack(direction: number): void;
+
+    /**
+     * Commands the agent to drop its entire inventory in the given direction
+     * @param direction the direction in which to drop items
+     */
+    //% help=agent/drop-all
+    //% promise
+    //% group="Inventory" weight=160
+    //% blockId=minecraftAgentCommandDropAll block="agent drop all|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::dropAllAsync promise
+    function dropAll(direction: number): void;
+
+    /**
+     * Sets the agent's active inventory slot
+     * @param slot the slot index between 1 and 27, eg: 1
+     */
+    //% help=agent/set-slot
+    //% group="Inventory" weight=170
+    //% blockId=minecraftAgentSetSlot block="agent set active slot %slot"
+    //% slot.min=1 slot.max=27
+    //% shim=agent::setSlot
+    function setSlot(slot: number): void;
+
+    /**
+     * Puts the specified block or item in the agent's inventory
+     * @param blockOrItem the block or item to give
+     * @param count the amount to give, eg: 1
+     * @param slot the slot index between 1 and 27, eg: 1
+     */
+    //% help=agent/set-item
+    //% promise
+    //% group="Inventory" weight=165
+    //% blockId=minecraftAgentSetItem block="agent set block or item $blockOrItem|count $count|in slot $slot"
+    //% blockOrItem.shadow=minecraftBlock
+    //% slot.min=1 slot.max=27
+    //% count.min=1 count.max=64
+    //% shim=agent::setItemAsync promise
+    function setItem(blockOrItem: number, count: number, slot: number): void;
+
+    /**
+     * Controls which assists are enabled for the agent
+     * @param assist the super power of the agent!
+     * @param on whether the assist is enabled or not
+     */
+    //% help=agent/set-assist
+    //% weight=310 blockGap=30
+    //% blockId=minecraftAgentChangeAssist block="agent %assist|%on"
+    //% on.shadow=toggleOnOff
+    //% shim=agent::setAssist
+    function setAssist(assist: AgentAssist, on: boolean): void;
+
+    /**
+     * Commands the agent to Collect a block or item of the specified type
+     * @param block the type of the block or item to collect
+     */
+    //% help=agent/collect
+    //% promise
+    //% group="Actions" weight=220
+    //% blockId=minecraftAgentCollect block="agent collect %block=minecraftItem"
+    //% block.shadow=minecraftItem
+    //% shim=agent::collectAsync promise
+    function collect(block: number): void;
+
+    /**
+     * Commands the agent to collect all nearby blocks and items
+     */
+    //% help=agent/collect-all
+    //% promise
+    //% group="Actions" weight=230
+    //% blockId=minecraftAgentCollectAll block="agent collect all"
+    //% shim=agent::collectAllAsync promise
+    function collectAll(): void;
+
+    /**
+     * Inspects a block in the specified direction and returns the block ID or data
+     * @param kind the desired result type for the detection: block id or data
+     * @param direction the direction in which to inspect
+     */
+    //% help=agent/inspect
+    //% promise
+    //% group="Actions" weight=210 blockGap=30
+    //% blockId=minecraftAgentInspect block="agent inspect %kind|%direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% blockGap=8
+    //% shim=agent::inspectAsync promise
+    function inspect(kind: AgentInspection, direction: number): number;
+
+    /**
+     * Transfers items from an inventory slot to another slot
+     * @param quantity the quantity of items to transfer, eg: 1
+     * @param sourceSlot the source slot index, from 1 to 27, eg: 1
+     * @param destinationSlot the inventory slot in which to drop the items, from 1 to 27, eg:2
+     */
+    //% help=agent/transfer
+    //% promise
+    //% group="Inventory" weight=140 blockGap=30
+    //% blockId=minecraftAgentTransfer block="agent transfer|amount %quantity|from slot %srcSlot|to slot %destinationSlot"
+    //% inlineInputMode="inline"
+    //% quantity.min=1 quantity.max=64 sourceSlot.min=1 sourceSlot.max=27 destinationSlot.min=1 destinationSlot.max=27
+    //% shim=agent::transferAsync promise
+    function transfer(quantity: number, sourceSlot: number, destinationSlot: number): void;
+
+    /**
+     * Drops an item from the inventory
+     * @param slot the slot from which the item will be dropped, from 1 to 27, eg: 1
+     * @param direction the direction in which to drop the item
+     * @param quantity the quantity of items to drop, eg: 1
+     */
+    //% help=agent/drop
+    //% promise
+    //% group="Inventory" weight=150
+    //% blockId=minecraftAgentDrop block="agent drop %direction|from slot %slot|amount %amount"
+    //% inlineInputMode="inline"
+    //% quantity.min=1 quantity.max=64 slot.min=1 slot.max=27
+    //% direction.shadow=minecraftAgentSixDirection
+    //% shim=agent::dropAsync promise
+    function drop(direction: number, slot: number, quantity: number): void;
+
+    /**
+     * Gets the number of items in the specified slot
+     * @param slot the slot index for which to count items, from 1 to 27, eg: 1
+     */
+    //% help=agent/get-item-count
+    //% promise
+    //% group="Inventory" weight=130
+    //% blockId=minecraftAgentGetItemCount block="agent get item count from slot %slot"
+    //% slot.min=1 slot.max=27
+    //% shim=agent::getItemCountAsync promise
+    function getItemCount(slot: number): number;
+
+    /**
+     * Gets the remaining space in the specified slot
+     * @param slot the slot index for which to count the remaining space, from 1 to 27, eg: 1
+     */
+    //% help=agent/get-item-space
+    //% promise
+    //% group="Inventory" weight=110
+    //% blockId=minecraftAgentGetItemSpace block="agent get remaining space in slot %slot"
+    //% slot.min=1 slot.max=27
+    //% shim=agent::getItemSpaceAsync promise
+    function getItemSpace(slot: number): number;
+
+    /**
+     * Gets the ID of the item in the specified inventory slot of the agent
+     * @param slot the slot index for which to return the item info, from 1 to 27, eg: 1
+     */
+    //% help=agent/get-item-detail
+    //% promise
+    //% group="Inventory" weight=120
+    //% blockId=minecraftAgentGetItemDetail block="agent get item id from slot %slot"
+    //% slot.min=1 slot.max=27
+    //% shim=agent::getItemDetailAsync promise
+    function getItemDetail(slot: number): number;
+
+    /**
+     * Teleports the agent to the player
+     */
+    //% help=agent/teleport-to-player
+    //% promise
+    //% weight=380
+    //% blockId=minecraftAgentTeleport block="agent teleport to player"
+    //% topblock topblockWeight=65
+    //% shim=agent::teleportToPlayerAsync promise
+    function teleportToPlayer(): void;
+
+    /**
+     * Teleports the agent to the specified coordinates facing the specified orientation
+     * @param pos the position to teleport the agent to
+     * @param dir the compass direction the agent should face after teleporting
+     */
+    //% help=agent/teleport
+    //% promise
+    //% weight=330
+    //% blockId=minecraftAgentTeleportPos block="agent teleport to $pos=minecraftCreatePosition|facing $dir"
+    //% dir.shadow=minecraftAgentCompassDirection
+    //% shim=agent::teleportAsync promise
+    function teleport(pos: Position, dir: number): void;
+
+}
+d
+
+

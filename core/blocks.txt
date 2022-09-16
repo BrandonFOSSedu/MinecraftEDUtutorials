@@ -1,0 +1,288 @@
+namespace blocks {
+
+    /**
+     * Represents a block from the game
+     * @param block the block
+     */
+    //% help=blocks/block
+    //% blockGap=8
+    //% weight=330
+    //% shim=TD_ID blockId=minecraftBlock block="%block"
+    //% block.fieldEditor="gridpicker"
+    //% block.fieldOptions.width=340 block.fieldOptions.columns=8 block.fieldOptions.tooltips=true
+    //% block.fieldOptions.tooltipsXOffset="20" block.fieldOptions.tooltipsYOffset="-20"
+    //% block.fieldOptions.maxRows="8"
+    //% block.fieldOptions.hasSearchBar=true
+    //% block.fieldOptions.hideRect=true
+    export function block(block: Block): number {
+        return block;
+    }
+
+    /**
+     * Represents an item from the game
+     * @param item the item
+     */
+    //% help=blocks/item
+    //% weight=320
+    //% shim=TD_ID blockId=minecraftItem block="item %item"
+    //% item.fieldEditor="gridpicker"
+    //% item.fieldOptions.width=340 item.fieldOptions.columns=8 item.fieldOptions.tooltips=true
+    //% item.fieldOptions.tooltipsXOffset="20" item.fieldOptions.tooltipsYOffset="-20"
+    //% item.fieldOptions.maxRows="8"
+    //% item.fieldOptions.hasSearchBar=true
+    //% item.fieldOptions.hideRect=true
+    export function item(item: Item): number {
+        return item;
+    }
+}
+
+    /**
+     * Places a block in the world
+     * @param block the block to place
+     * @param pos the position at which to place the block
+     */
+    //% help=blocks/place
+    //% promise
+    //% weight=360
+    //% blockId=minecraftPlace block="place %block=minecraftBlock|at %pos=minecraftCreatePosition"
+    //% block.shadow=minecraftBlock
+    //% topblock topblockWeight=85
+    //% shim=blocks::placeAsync promise
+    function place(block: number, pos: Position): void;
+
+    /**
+     * Fills a volume between two positions
+     * @param block the block to fill the volume with
+     * @param from the first corner of the cubic region
+     * @param to the opposite corner of the cubic region
+     * @param operator handling for existing blocks in the specified region
+     */
+    //% help=blocks/fill
+    //% promise
+    //% weight=250
+    //% blockId=minecraftFill block="fill with %block=minecraftBlock|from %from=minecraftCreatePosition|to %to=minecraftCreatePosition|%operator" blockExternalInputs=1
+    //% block.shadow=minecraftBlock
+    //% shim=blocks::fillAsync promise
+    function fill(block: number, from: Position, to: Position, operator?: FillOperation): void;
+
+    /**
+     * This API is deprecated.
+     */
+    //% help=blocks/positionsOfBlocksInRange
+    //% promise
+    //% weight=5
+    //% blockId=minecraftpositionsOfBlocksInRangeAsync block="positions of all $block|from $from|to $to"
+    //% blockExternalInputs=1
+    //% block.shadow=minecraftBlock
+    //% from.shadow=minecraftCreatePosition
+    //% to.shadow=minecraftCreatePosition
+    //% deprecated=1
+    //% shim=blocks::positionsOfBlocksInRangeAsync promise
+    function positionsOfBlocksInRange(block: number, from: Position, to: Position): Position[];
+
+    /**
+     * This API is deprecated.
+     */
+    //% help=blocks/kindsOfBlocksInRange
+    //% promise
+    //% weight=3
+    //% blockId=minecraftkindsOfBlocksInRange block="all block kinds from $from|to $to"
+    //% blockExternalInputs=1
+    //% from.shadow=minecraftCreatePosition
+    //% to.shadow=minecraftCreatePosition
+    //% deprecated=1
+    //% shim=blocks::kindsOfBlocksInRangeAsync promise
+    function kindsOfBlocksInRange(from: Position, to: Position): number[];
+
+    /**
+     * Runs code when a certain type of block is placed
+     * @param block the type of block that should trigger this code when placed
+     */
+    //% help=blocks/on-block-placed
+    //% promise
+    //% weight=350
+    //% blockId=minecraftOnBlockPlaced block="on %block=minecraftBlock|placed"
+    //% block.shadow=minecraftBlock
+    //% shim=blocks::onBlockPlacedAsync promise
+    function onBlockPlaced(block: number, handler: () => void): void;
+
+    /**
+     * Runs code when a certain type of block is mined or broken
+     * @param block the type of block that should trigger this code when broken
+     */
+    //% help=blocks/on-block-broken
+    //% promise
+    //% weight=340
+    //% blockId=minecraftOnBlockBroken block="on %block=minecraftBlock|broken"
+    //% block.shadow=minecraftBlock
+    //% shim=blocks::onBlockBrokenAsync promise
+    function onBlockBroken(block: number, handler: () => void): void;
+
+    /**
+     * Replaces all the blocks of a certain type inside the specified region with a new block type
+     * @param newblock the new block type that will replace existing blocks
+     * @param oldblock the block type that will be replaced by the new block type
+     * @param from the first corner of the cubic region
+     * @param to the opposite corner of the cubic region
+     */
+    //% help=blocks/replace
+    //% promise
+    //% weight=130
+    //% blockId=minecraftReplace block="replace with %newblock=minecraftBlock|when block is %oldblock=minecraftBlock|from %from=minecraftCreatePosition|to %to=minecraftCreatePosition" blockExternalInputs=1
+    //% newblock.shadow=minecraftBlock
+    //% oldblock.shadow=minecraftBlock
+    //% shim=blocks::replaceAsync promise
+    function replace(newblock: number, oldblock: number, from: Position, to: Position): void;
+
+    /**
+     * Clones a cubic region into a different location
+     * @param begin the first corner of the cubic region
+     * @param end the opposite corner of the cubic region
+     * @param destination the first corner of the destination region
+     * @param mask how to handle air blocks
+     * @param mode how to handle the cloned region
+     */
+    //% help=blocks/clone
+    //% promise
+    //% weight=120
+    //% blockId=minecraftClone block="clone from %begin=minecraftCreatePosition|to %end=minecraftCreatePosition|into %destination=minecraftCreatePosition|mask %mask|mode %mode" blockExternalInputs=1
+    //% shim=blocks::cloneAsync promise
+    function clone(begin: Position, end: Position, destination: Position, mask: CloneMask, mode: CloneMode): void;
+
+    /**
+     * Clones a cubic region into a different location, if the blocks in the region match a certain block type
+     * @param begin the first corner of the cubic region
+     * @param end the opposite corner of the cubic region
+     * @param destination the first corner of the destination region
+     * @param block the block type to look for when cloning
+     * @param mode how to handle the cloned region
+     */
+    //% help=blocks/clone-filtered
+    //% promise
+    //% weight=110
+    //% blockId=minecraftCloneFiltered block="clone from %begin=minecraftCreatePosition|to %end=minecraftCreatePosition|into %destination=minecraftCreatePosition|filtered by %block=minecraftBlock|mode %mode"
+    //% block.shadow=minecraftBlock
+    //% blockExternalInputs=1
+    //% shim=blocks::cloneFilteredAsync promise
+    function cloneFiltered(begin: Position, end: Position, destination: Position, block: number, mode: CloneMode): void;
+
+    /**
+     * Tests whether the block at the specified coordinate is of a certain type
+     * @param block the type of the block to test for
+     * @param pos the coordinates where the block should be
+     */
+    //% help=blocks/test-for-block
+    //% promise
+    //% weight=310 blockGap=60
+    //% blockId=minecraftTestForBlock block="test for %block=minecraftBlock|at %pos=minecraftCreatePosition"
+    //% block.shadow=minecraftBlock
+    //% shim=blocks::testForBlockAsync promise
+    function testForBlock(block: number, pos: Position): boolean;
+
+    /**
+     * Tests whether the blocks in two regions match.
+     */
+    //% promise
+    //% shim=blocks::testForBlocksAsync promise
+    function testForBlocks(begin: Position, end: Position, destination: Position, mask?: TestForBlocksMask): boolean;
+
+    /**
+     * Represents a block or item from the game with a data value
+     * @param b the block or item
+     * @param data the data value for the block or item
+     */
+    //% help=blocks/block-with-data
+    //% weight=230
+    //% blockId=minecraftBlockData block="%block=minecraftBlock|with data %data"
+    //% block.shadow=minecraftBlock
+    //% shim=blocks::blockWithData
+    function blockWithData(b: number, data: number): number;
+
+    /**
+     * Represents a block or item from the game by its value ID
+     * @param id the ID of the block or item from the game
+     */
+    //% help=blocks/block-by-id
+    //% weight=220
+    //% blockId=minecraftBlockID block="block by ID %id"
+    //% shim=blocks::blockById
+    function blockById(id: number): number;
+
+    /**
+     * Represents a block or item from the game by its code name
+     * @param name the name of the block, eg: "stone"
+     */
+    //% help=blocks/block-by-name
+    //% weight=210 blockGap=60
+    //% blockId=minecraftBlockName block="block by name %name"
+    //% shim=blocks::blockByName
+    function blockByName(name: string): number;
+
+    /**
+     * Represents a colored block from the game
+     * @param type the type of block, either wool or concrete
+     * @param color the color of the block
+     */
+    //% help=blocks/color-to-block
+    //% weight=1
+    //% blockId=minecraftBlocksColorToBlock block="%type|of color %color=minecraftBlocksColor"
+    //% deprecated=true
+    //% shim=blocks::colorToBlock
+    function colorToBlock(type: ColoredBlock, color: number): number;
+
+    /**
+     * Returns the color value of known block colors
+     * @param color the color
+     */
+    //% help=blocks/color
+    //% weight=1
+    //% blockId=minecraftBlocksColor block="%color"
+    //% deprecated=true
+    //% shim=blocks::color
+    function color(color: BlockColor): number;
+
+    /**
+     * Creates a repeater in a particular state
+     * @param direction the direction which the repeater is facing
+     * @param delay the delay for the repeater, in game ticks
+     */
+    //% help=blocks/repeater
+    //% weight=150
+    //% delay.min=1 delay.max=4
+    //% blockId=minecraftBlockRepeater block="repeater|facing %direction|delay %ticks"
+    //% shim=blocks::repeater
+    function repeater(direction: CompassDirection, delay: number): number;
+
+    /**
+     * Creates a lever in a particular state
+     * @param position the position state of the lever
+     */
+    //% help=blocks/lever
+    //% weight=160
+    //% blockId=minecraftBlockLever block="lever %position"
+    //% shim=blocks::lever
+    function lever(position: LeverPosition): number;
+
+    /**
+     * Creates a comparator in a particular state
+     * @param direction the direction which the comparator is facing
+     * @param mode the comparison mode of the comparator
+     */
+    //% help=blocks/comparator
+    //% weight=140
+    //% blockId=minecraftBlockComparator block="comparator facing %direction|mode %mode"
+    //% inlineInputMode="external"
+    //% shim=blocks::comparator
+    function comparator(direction: CompassDirection, mode: ComparatorMode): number;
+
+    //% blockId=minecraftNameOfBlock
+    //% block="name of block $block"
+    //% block.shadow=minecraftBlock
+    //% weight=0
+    //% shim=blocks::nameOfBlock
+    function nameOfBlock(block: number): string;
+
+}
+
+
+
