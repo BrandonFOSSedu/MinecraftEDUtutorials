@@ -27,6 +27,7 @@ blocks.place(STONE, pos(0, 0, 0))
 
 
 ## Step 3: Run your code
+
 Put some blocks onto the stage
 
 This is really hard

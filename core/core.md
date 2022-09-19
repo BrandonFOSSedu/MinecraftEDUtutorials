@@ -9,6 +9,7 @@ A list of Minecraft Makecode's API
 - blocks
 - agent
 - position
+- builder
 - console
 - control
 - Array
@@ -74,6 +75,7 @@ A list of Minecraft Makecode's API
 - CloneMask
 - CloneMode
 - TargetSelectorKind
+  - NearestPlayer, LocalPlayer, RandomPlayer, AllPlayers, AllEntities, MyAgent
 - Axis
 - SixDirection
 - FourDirection
